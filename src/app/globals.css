@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f8fb;
+  --foreground: #0f172a;
+  --canvas: #f5f8fb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.display-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.07em;
+  font-weight: 600;
+}
+
+.section-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgb(71 85 105);
+  font-weight: 600;
+}
+
+.feature-card {
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.88);
+  padding: 1.5rem;
+  box-shadow: 0 20px 80px rgba(10, 37, 64, 0.1);
+  backdrop-filter: blur(16px);
+}
+
+.footer-title {
+  margin-bottom: 0.85rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgb(100 116 139);
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: rgb(15 23 42);
+}
+
+.footer-link:hover {
+  color: rgb(13 148 136);
+}
