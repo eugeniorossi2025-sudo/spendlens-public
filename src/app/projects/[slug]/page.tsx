@@ -15,9 +15,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const health = evaluateProject(project);
 
   const stats = [
-    { label: "Costo pianificato", value: formatCurrency(project.budgetPlanned) },
-    { label: "Costo effettivo", value: formatCurrency(project.budgetActual) },
-    { label: "Scostamento costo", value: formatPercent(health.costDeltaPct) },
+    { label: project.valueKind === "concession-estimate" ? "Valore concessione" : "Costo pianificato", value: project.valueKind === "concession-estimate" ? formatCurrency(Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0)) : formatCurrency(project.budgetPlanned) },
+    { label: project.valueKind === "concession-estimate" ? "Qualifica valore" : "Costo effettivo", value: project.valueKind === "concession-estimate" ? project.valueNote : formatCurrency(project.budgetActual) },
+    { label: "Scostamento costo", value: project.valueKind === "concession-estimate" ? "Non comparabile come spesa diretta" : formatPercent(health.costDeltaPct) },
     { label: "Tempo pianificato", value: project.timelinePlannedDays === null ? "Dati non disponibili" : `${project.timelinePlannedDays} giorni` },
     { label: "Tempo effettivo", value: project.timelineActualDays === null ? "Dati non disponibili" : `${project.timelineActualDays} giorni` },
     { label: "Scostamento tempo", value: formatPercent(health.timeDeltaPct) },
@@ -42,6 +42,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-500">
             Questa scheda e&apos; un dossier informativo pubblico. Il suo semaforo e&apos; un indicatore editoriale basato su atti pubblicati esaminati da SpendLens e non costituisce un&apos;accusa o una valutazione legale.
           </p>
+          {project.valueKind === "concession-estimate" ? (
+            <div className="mt-5 rounded-[22px] border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-7 text-rose-900">
+              Il numero economico principale esposto in questa scheda e&apos; il valore complessivo stimato della concessione, comprensivo di opzioni, pubblicato da ANAC. Non va letto come spesa pubblica diretta gia pagata dal Comune.
+            </div>
+          ) : null}
           <div className={`mt-5 rounded-[22px] px-4 py-3 text-sm leading-7 ${project.dossierStrength === "strong" ? "border border-teal-200 bg-teal-50 text-teal-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>
             {project.dossierNote}
           </div>

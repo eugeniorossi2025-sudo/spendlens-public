@@ -15,7 +15,7 @@ export default function DashboardPage() {
           </p>
         </div>
         <div className="rounded-[24px] border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-900">
-          Qui i dossier sono ordinati per peso economico visibile. Prima vengono gli appalti davvero grossi e strategici; sotto restano i dossier utili ma con importi minori o con dati economici ancora non pubblicati.
+          Qui i dossier sono ordinati per peso economico visibile. Quando il valore deriva da una concessione o da una stima comprensiva di opzioni, la scheda lo segnala esplicitamente e non lo tratta come spesa pubblica diretta comparabile.
         </div>
         <SummaryCards />
       </section>

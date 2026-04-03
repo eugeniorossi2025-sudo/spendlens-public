@@ -18,17 +18,17 @@ export function SummaryCards() {
     {
       title: "Dossier ad alto valore",
       value: String(highValueDossiers),
-      note: "Procedure con valore pubblico visibile pari o superiore a 1 milione di euro",
+      note: "Procedure con valore economico visibile pari o superiore a 1 milione di euro, incluse concessioni stimate",
     },
     {
-      title: "Valore piu alto tracciato",
+      title: "Valore economico piu alto",
       value: topDossier ? formatCurrency(dossierWeight(topDossier)) : "Dati non disponibili",
-      note: topDossier ? topDossier.title : "Nessun dossier con valore economico visibile",
+      note: topDossier ? `${topDossier.title} · ${topDossier.valueNote}` : "Nessun dossier con valore economico visibile",
     },
     {
-      title: "Massa economica visibile",
+      title: "Spesa pubblica comparabile",
       value: formatCurrency(Math.max(totals.planned, totals.actual)),
-      note: "Somma oggi piu leggibile tra pianificato pubblico e valori di affidamento pubblicati",
+      note: "Somma tra importi pianificati e valori di affidamento pubblicati, esclusi i valori stimati di concessione",
     },
   ];
 

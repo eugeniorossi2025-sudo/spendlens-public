@@ -15,6 +15,8 @@ export type ProjectSource = {
   note: string;
 };
 
+export type ProjectValueKind = "public-spend" | "award-value" | "concession-estimate" | "not-published";
+
 export type SpendingProject = {
   slug: string;
   code: string;
@@ -37,6 +39,8 @@ export type SpendingProject = {
   sourceQuality: "high" | "medium" | "low";
   dossierStrength: "strong" | "partial";
   dossierNote: string;
+  valueKind: ProjectValueKind;
+  valueNote: string;
   evidence: ProjectEvidence[];
   missingFacts: string[];
   sources: ProjectSource[];
@@ -66,6 +70,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "medium",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: procedura di gara ufficiale con CIG, importi, date e documenti pubblici verificati.",
+    valueKind: "public-spend",
+    valueNote: "Valore complessivo dell'appalto pubblicato nella scheda di gara.",
     evidence: [
       { label: "Riferimento procedura", value: "G00167" },
       { label: "CIG", value: "9490419D80" },
@@ -129,6 +135,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "medium",
     dossierStrength: "partial",
     dossierNote: "Dossier parziale: esiste un servizio pubblico descritto, ma la fonte operativa usata in precedenza non e' piu viva e mancano riferimenti contrattuali solidi.",
+    valueKind: "not-published",
+    valueNote: "Nessun importo pubblico verificato in questa iterazione.",
     evidence: [
       { label: "Fatto verificato storicamente", value: "Servizio scuolabus presentato come attivo dal Comune" },
       { label: "Dettaglio ricordato dalla fonte", value: "Iscrizioni dal 01/09/2025" },
@@ -182,6 +190,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "medium",
     dossierStrength: "partial",
     dossierNote: "Dossier parziale: perimetro del servizio plausibile e gia visto in fonti istituzionali, ma senza una fonte viva abbastanza forte da sostenere importi o affidamenti.",
+    valueKind: "not-published",
+    valueNote: "Nessun importo pubblico verificato in questa iterazione.",
     evidence: [
       { label: "Perimetro servizio", value: "Supporto all'integrazione scolastica per alunni con disabilita certificata" },
       { label: "Condizione di accesso", value: "Richiamo a certificazione diagnostica e indicazione UONPIA" },
@@ -235,6 +245,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "high",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: esito ufficiale con CIG, periodo di servizio, RUP e stato di aggiudicazione pubblicati.",
+    valueKind: "not-published",
+    valueNote: "La scheda esito consultata non espone un valore economico leggibile in questa iterazione.",
     evidence: [
       { label: "Riferimento procedura", value: "G00869" },
       { label: "CIG", value: "BAF82D16CE" },
@@ -289,6 +301,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "high",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: esito ufficiale e pagina ANAC convergono su CIG, periodo, stato e valore di affidamento.",
+    valueKind: "award-value",
+    valueNote: "Valore di affidamento pubblicato da ANAC.",
     evidence: [
       { label: "Riferimento procedura", value: "G00868" },
       { label: "CIG", value: "BB02138E8A" },
@@ -348,6 +362,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "high",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: fonte ufficiale con CIG, CUP, finestra temporale, RUP e collegamento esplicito al perimetro PNRR.",
+    valueKind: "not-published",
+    valueNote: "Valore economico non emerso nella lettura pubblica automatica.",
     evidence: [
       { label: "Riferimento procedura", value: "G00873" },
       { label: "CIG", value: "BB14AFE988" },
@@ -403,6 +419,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "high",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: procedura aperta con CIG, durata, documenti di esito e collegamento TED pubblicamente consultabili.",
+    valueKind: "not-published",
+    valueNote: "Importo economico non leggibile nell'estrazione testuale usata per questo passaggio.",
     evidence: [
       { label: "Riferimento procedura", value: "G00798" },
       { label: "CIG", value: "B937C24BFB" },
@@ -455,9 +473,9 @@ export const projects: SpendingProject[] = [
     contractor: "Aggiudicatario presente nella pubblicazione legale, non leggibile nell'estrazione automatica corrente",
     procurementMethod: "Concessione in finanza di progetto con pubblicazione ANAC e TED",
     statusLabel: "Contratto emesso",
-    summary: "Concessione G00704 per riqualificazione e gestione del centro polisportivo E. Franzanti, uno dei dossier economicamente piu rilevanti emersi nel portale pubblico. La pubblicazione ANAC espone un valore complessivo e un valore offerta vincente pari a oltre 100 milioni di euro.",
+    summary: "Concessione G00704 per riqualificazione e gestione del centro polisportivo E. Franzanti. La pubblicazione ANAC espone un valore complessivo stimato, comprensivo di opzioni, e un valore offerta vincente pari a oltre 100 milioni di euro: questo dato va letto come valore economico della concessione, non come spesa pubblica diretta gia pagata dal Comune.",
     budgetPlanned: null,
-    budgetActual: 100143503,
+    budgetActual: null,
     timelinePlannedDays: null,
     timelineActualDays: null,
     completionPct: 0,
@@ -466,19 +484,22 @@ export const projects: SpendingProject[] = [
     sourceCount: 4,
     sourceQuality: "high",
     dossierStrength: "strong",
-    dossierNote: "Dossier forte: concessione strategica con CIG, CUP, valore stimato, offerta vincente e doppia tracciatura ANAC-TED.",
+    dossierNote: "Dossier forte ma da leggere correttamente: si tratta di una concessione in project financing, non di un esborso pubblico diretto di 100 milioni.",
+    valueKind: "concession-estimate",
+    valueNote: "Valore complessivo stimato della concessione, comprensivo di opzioni, pubblicato da ANAC.",
     evidence: [
       { label: "Riferimento procedura", value: "G00704" },
       { label: "CIG", value: "B7EF2981C5" },
       { label: "CUP", value: "E35B24000770004" },
-      { label: "Valore complessivo stimato", value: "100.143.503,00 EUR" },
-      { label: "Valore offerta vincente", value: "100.143.503,00 EUR" },
+      { label: "Valore complessivo stimato della concessione", value: "100.143.503,00 EUR" },
+      { label: "Valore offerta vincente di concessione", value: "100.143.503,00 EUR" },
       { label: "Data pubblicazione esito", value: "06/03/2026" },
       { label: "Stato portale", value: "Conclusa - Emesso contratto/ordine" },
       { label: "CPV", value: "Servizi di gestione di impianti sportivi" },
       { label: "RUP", value: "Mari Enrico" },
     ],
     missingFacts: [
+      "Il valore pubblicato da ANAC e' della concessione e non va letto come spesa pubblica diretta gia sostenuta dal Comune.",
       "Durata operativa non emersa nell'estrazione automatica della pagina consultata.",
       "Nome dell'aggiudicatario non leggibile nel testo estratto dalla pubblicazione ANAC.",
     ],
@@ -491,7 +512,7 @@ export const projects: SpendingProject[] = [
       {
         label: "Pubblicazione legale ANAC",
         url: "https://pubblicitalegale.anticorruzione.it/esiti/534be556-a119-4ece-83f3-e2ad74c7133c",
-        note: "Pagina che espone il valore complessivo stimato e il valore dell'offerta vincente pari a 100.143.503,00 EUR.",
+        note: "Pagina che espone il valore complessivo stimato della concessione, comprensivo di opzioni, e il valore dell'offerta vincente pari a 100.143.503,00 EUR.",
       },
       {
         label: "eForm TED collegato",
@@ -507,8 +528,8 @@ export const projects: SpendingProject[] = [
     milestones: [
       { date: "2026-03-03", label: "Pubblicazione legale ANAC", note: "ANAC pubblica l'avviso di aggiudicazione della concessione Franzanti." },
       { date: "2026-03-06", label: "Esito comunale", note: "Il Comune espone la scheda G00704 con stato conclusa-emesso contratto/ordine." },
-      { date: "2026-03-06", label: "Valore reso pubblico", note: "La pubblicazione ANAC indica valore complessivo stimato e offerta vincente a 100.143.503,00 EUR." },
-      { date: "2026-04-03", label: "Nota di monitoraggio", note: "Dossier tra i piu strategici del pilot per rilevanza economica e visibilita delle fonti." },
+      { date: "2026-03-06", label: "Valore di concessione reso pubblico", note: "La pubblicazione ANAC indica valore complessivo stimato della concessione, comprensivo di opzioni, e offerta vincente a 100.143.503,00 EUR." },
+      { date: "2026-04-03", label: "Nota di monitoraggio", note: "Dossier tra i piu strategici del pilot, ma il numero da 100 milioni va qualificato come valore di concessione e non come spesa pubblica secca." },
     ]
   },
   {
@@ -533,6 +554,8 @@ export const projects: SpendingProject[] = [
     sourceQuality: "high",
     dossierStrength: "strong",
     dossierNote: "Dossier forte: esito comunale e pubblicazione legale ANAC convergono su CIG, CUP e valore di affidamento.",
+    valueKind: "award-value",
+    valueNote: "Valore di affidamento pubblicato da ANAC.",
     evidence: [
       { label: "Riferimento procedura", value: "G00872" },
       { label: "CIG", value: "BB122831B9" },

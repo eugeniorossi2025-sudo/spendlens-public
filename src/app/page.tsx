@@ -11,9 +11,9 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_420px] lg:items-end">
         <div className="space-y-6">
           <div className="eyebrow">Progetto pilota Piacenza</div>
-          <h1 className="display-title max-w-5xl text-slate-950">Appalti seri di Piacenza: quelli con piu soldi e con piu tracce pubbliche.</h1>
+          <h1 className="display-title max-w-5xl text-slate-950">Dossier seri di Piacenza: valori pubblici, concessioni e buchi documentali messi in chiaro.</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-600">
-            Questo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza e mette davanti i dossier con piu peso economico e piu rilevanza strategica. L&apos;obiettivo e&apos; semplice: mostrare dove passano i soldi grossi, cosa e&apos; documentato e dove mancano ancora pezzi decisivi.
+            Questo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza e distingue tra spesa pubblica comparabile, valori di affidamento e valori stimati di concessione. L&apos;obiettivo e&apos; semplice: mostrare cosa e&apos; documentato, cosa no, e dove i numeri vanno qualificati con precisione.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/dashboard" className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800">
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-5 space-y-5">
             <Metric label="Dossier critici" value={String(severity.red)} note="Nessun segnale rosso nel pilot attuale" />
             <Metric label="Da attenzionare" value={String(severity.yellow)} note="Dati pubblici incompleti, parziali o non comparabili" />
-            <Metric label="Soldi grossi tracciati" value="100M+" note="Concessioni e affidamenti con massa economica visibile" />
+            <Metric label="Valori alti tracciati" value="100M+" note="Include anche concessioni stimate, non solo spesa pubblica diretta" />
           </div>
         </aside>
       </section>

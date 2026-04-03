@@ -92,7 +92,9 @@ export function totalsSnapshot() {
   return projects.reduce(
     (acc, project) => {
       acc.planned += project.budgetPlanned ?? 0;
-      acc.actual += project.budgetActual ?? 0;
+      if (project.valueKind !== "concession-estimate") {
+        acc.actual += project.budgetActual ?? 0;
+      }
       return acc;
     },
     { planned: 0, actual: 0 },

@@ -36,7 +36,7 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                       <div className="text-sm text-slate-600">{project.location} · {project.authority}</div>
                       {dossierWeight(project) >= 1_000_000 ? (
                         <div className="inline-flex w-fit items-center rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-rose-800">
-                          Appalto ad alto valore
+                          {project.valueKind === "concession-estimate" ? "Concessione ad alto valore" : "Appalto ad alto valore"}
                         </div>
                       ) : null}
                       <div className={`text-xs font-medium ${project.dossierStrength === "strong" ? "text-teal-700" : "text-amber-700"}`}>
@@ -46,8 +46,8 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                   </td>
                   <td className="px-6 py-5"><StatusPill tone={health.overall} /></td>
                   <td className="px-6 py-5 text-sm text-slate-700">
-                    <div className="font-medium text-slate-950">{project.budgetActual === null ? (project.budgetPlanned === null ? "Valore non pubblicato" : `Pianificato ${formatCurrency(project.budgetPlanned)}`) : formatCurrency(project.budgetActual)}</div>
-                    <div>{health.costDeltaPct === null ? (project.budgetActual === null ? "Consuntivo economico non pubblicato" : "Scostamento non calcolabile") : `${formatPercent(health.costDeltaPct)} rispetto al piano`}</div>
+                    <div className="font-medium text-slate-950">{renderPrimaryValue(project)}</div>
+                    <div>{renderSecondaryValue(project, health.costDeltaPct)}</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">
                     <div className="font-medium text-slate-950">
@@ -72,4 +72,32 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
 
 function dossierWeight(project: (typeof projects)[number]) {
   return Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0);
+}
+
+function renderPrimaryValue(project: (typeof projects)[number]) {
+  if (project.valueKind === "concession-estimate") {
+    return `Concessione stimata ${formatCurrency(Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0))}`;
+  }
+
+  if (project.budgetActual !== null) {
+    return formatCurrency(project.budgetActual);
+  }
+
+  if (project.budgetPlanned !== null) {
+    return `Pianificato ${formatCurrency(project.budgetPlanned)}`;
+  }
+
+  return "Valore non pubblicato";
+}
+
+function renderSecondaryValue(project: (typeof projects)[number], costDeltaPct: number | null) {
+  if (project.valueKind === "concession-estimate") {
+    return project.valueNote;
+  }
+
+  if (costDeltaPct === null) {
+    return project.budgetActual === null ? "Consuntivo economico non pubblicato" : "Scostamento non calcolabile";
+  }
+
+  return `${formatPercent(costDeltaPct)} rispetto al piano`;
 }
