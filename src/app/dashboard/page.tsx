@@ -14,6 +14,9 @@ export default function DashboardPage() {
             I semafori sono generati da regole esplicite: oltre il 20% di extra-costo e&apos; rosso, oltre il 30% di ritardo e&apos; rosso, dati mancanti o parziali sono gialli. Sono indicatori informativi, non accertamenti di illecito.
           </p>
         </div>
+        <div className="rounded-[24px] border border-amber-200 bg-amber-50 px-5 py-4 text-sm leading-7 text-amber-900">
+          In questa pubblicazione un dossier e&apos; forte e nasce da una procedura di gara ufficiale; due dossier restano parziali perche le pagine di servizio verificate oggi risultano rimosse o non sufficienti a ricostruire importi, CIG e affidatari.
+        </div>
         <SummaryCards />
       </section>
 

@@ -42,6 +42,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-500">
             Questa scheda e&apos; un dossier informativo pubblico. Il suo semaforo e&apos; un indicatore editoriale basato su atti pubblicati esaminati da SpendLens e non costituisce un&apos;accusa o una valutazione legale.
           </p>
+          <div className={`mt-5 rounded-[22px] px-4 py-3 text-sm leading-7 ${project.dossierStrength === "strong" ? "border border-teal-200 bg-teal-50 text-teal-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>
+            {project.dossierNote}
+          </div>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Info label="Ente" value={project.authority} />
@@ -69,6 +72,52 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             ))}
           </div>
         </aside>
+      </section>
+
+      <section className="rounded-[32px] border border-white/60 bg-white/88 p-8 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">
+        <div className="grid gap-8 lg:grid-cols-2">
+          <div>
+            <div className="eyebrow">Evidenze</div>
+            <h2 className="section-title mt-3 text-slate-950">Cosa sappiamo davvero</h2>
+            <div className="mt-6 space-y-4">
+              {project.evidence.map((item) => (
+                <div key={`${project.slug}-evidence-${item.label}`} className="rounded-[22px] border border-slate-200/80 bg-slate-50/80 p-5">
+                  <div className="text-xs uppercase tracking-[0.16em] text-slate-500">{item.label}</div>
+                  <div className="mt-2 text-base font-semibold text-slate-950">{item.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="eyebrow">Buchi documentali</div>
+            <h2 className="section-title mt-3 text-slate-950">Cosa manca ancora</h2>
+            <div className="mt-6 space-y-3">
+              {project.missingFacts.map((item) => (
+                <div key={`${project.slug}-missing-${item}`} className="rounded-[22px] border border-slate-200/80 bg-slate-50/80 p-5 text-sm leading-7 text-slate-700">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-[32px] border border-white/60 bg-white/88 p-8 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">
+        <div className="eyebrow">Fonti pubbliche</div>
+        <h2 className="section-title mt-3 text-slate-950">Link e riferimenti usati nel dossier</h2>
+        <div className="mt-8 space-y-4">
+          {project.sources.map((source) => (
+            <div key={`${project.slug}-source-${source.label}`} className="rounded-[22px] border border-slate-200/80 bg-slate-50/80 p-5">
+              <div className="text-base font-semibold text-slate-950">{source.label}</div>
+              {source.url ? (
+                <a href={source.url} target="_blank" rel="noreferrer" className="mt-2 block break-all text-sm font-medium text-teal-800 hover:text-teal-950">
+                  {source.url}
+                </a>
+              ) : null}
+              <div className="mt-2 text-sm leading-7 text-slate-600">{source.note}</div>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="rounded-[32px] border border-white/60 bg-white/88 p-8 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">

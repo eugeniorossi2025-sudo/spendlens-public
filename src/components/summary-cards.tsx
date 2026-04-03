@@ -4,12 +4,14 @@ import { countBySeverity, formatCurrency, totalsSnapshot } from "@/lib/status";
 export function SummaryCards() {
   const severity = countBySeverity();
   const totals = totalsSnapshot();
+  const strongDossiers = projects.filter((project) => project.dossierStrength === "strong").length;
+  const partialDossiers = projects.filter((project) => project.dossierStrength === "partial").length;
 
   const cards = [
     {
       title: "Dossier monitorati",
       value: String(projects.length),
-      note: `${severity.red} critici · ${severity.yellow} da attenzionare`,
+      note: `${strongDossiers} forti · ${partialDossiers} parziali · ${severity.yellow} da attenzionare`,
     },
     {
       title: "Budget pubblico pianificato",
@@ -24,7 +26,7 @@ export function SummaryCards() {
     {
       title: "Affidabilità metodo",
       value: "Alta",
-      note: "Regole semaforiche e copertura dati dichiarate apertamente",
+      note: "Regole semaforiche, forza del dossier e buchi documentali dichiarati apertamente",
     },
   ];
 

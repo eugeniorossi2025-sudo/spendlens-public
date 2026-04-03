@@ -32,22 +32,25 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                         {project.title}
                       </Link>
                       <div className="text-sm text-slate-600">{project.location} · {project.authority}</div>
+                      <div className={`text-xs font-medium ${project.dossierStrength === "strong" ? "text-teal-700" : "text-amber-700"}`}>
+                        {project.dossierNote}
+                      </div>
                     </div>
                   </td>
                   <td className="px-6 py-5"><StatusPill tone={health.overall} /></td>
                   <td className="px-6 py-5 text-sm text-slate-700">
-                    <div className="font-medium text-slate-950">{formatCurrency(project.budgetActual)}</div>
-                    <div>{formatPercent(health.costDeltaPct)} rispetto al piano</div>
+                    <div className="font-medium text-slate-950">{project.budgetActual === null ? (project.budgetPlanned === null ? "Valore non pubblicato" : `Pianificato ${formatCurrency(project.budgetPlanned)}`) : formatCurrency(project.budgetActual)}</div>
+                    <div>{health.costDeltaPct === null ? (project.budgetActual === null ? "Consuntivo economico non pubblicato" : "Scostamento non calcolabile") : `${formatPercent(health.costDeltaPct)} rispetto al piano`}</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">
                     <div className="font-medium text-slate-950">
-                      {project.timelineActualDays === null ? "Dati non disponibili" : `${project.timelineActualDays} g`}
+                      {project.timelineActualDays === null ? (project.timelinePlannedDays === null ? "Durata non pubblicata" : `Pianificato ${project.timelinePlannedDays} giorni`) : `${project.timelineActualDays} giorni`}
                     </div>
-                    <div>{formatPercent(health.timeDeltaPct)} rispetto al piano</div>
+                    <div>{health.timeDeltaPct === null ? (project.timelineActualDays === null ? "Consuntivo tempi non pubblicato" : "Scostamento non calcolabile") : `${formatPercent(health.timeDeltaPct)} rispetto al piano`}</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">
                     <div className="font-medium text-slate-950">{project.dataCoveragePct}% coperto</div>
-                    <div>{project.sourceCount} fonti</div>
+                    <div>{project.sourceCount} fonti · {project.dossierStrength === "strong" ? "dossier forte" : "dossier parziale"}</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">{project.updatedAt}</td>
                 </tr>
