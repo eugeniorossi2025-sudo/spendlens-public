@@ -52,6 +52,8 @@ npm start
 
 This app is designed for fast deployment on Vercel.
 
+GitHub is connected so pushes to the production branch can trigger automatic deployments.
+
 ```bash
 npx vercel
 ```
