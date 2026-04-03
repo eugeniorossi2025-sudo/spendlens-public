@@ -4,7 +4,7 @@ import { evaluateProject, formatCurrency, formatPercent } from "@/lib/status";
 import { StatusPill } from "@/components/status-pill";
 
 export function ProjectTable({ compact = false }: { compact?: boolean }) {
-  const rows = compact ? projects.slice(0, 4) : projects;
+  const rows = compact ? projects.slice(0, 6) : projects;
 
   return (
     <div className="overflow-hidden rounded-[28px] border border-white/60 bg-white/88 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">

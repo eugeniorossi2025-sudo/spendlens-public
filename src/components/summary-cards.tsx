@@ -21,7 +21,7 @@ export function SummaryCards() {
     {
       title: "Costo effettivo dichiarato",
       value: formatCurrency(totals.actual),
-      note: "Solo valori pubblicati, esclusi gli aggiornamenti mancanti",
+      note: "Include valori di affidamento o offerta vincente quando pubblicati",
     },
     {
       title: "Affidabilità metodo",

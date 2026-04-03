@@ -11,9 +11,9 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_420px] lg:items-end">
         <div className="space-y-6">
           <div className="eyebrow">Progetto pilota Piacenza</div>
-          <h1 className="display-title max-w-5xl text-slate-950">Tre dossier sui servizi scolastici, ridotti a segnali pubblici leggibili.</h1>
+          <h1 className="display-title max-w-5xl text-slate-950">Nove dossier su servizi scolastici, inclusione e patrimonio pubblico.</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-600">
-            Questo primo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza sui servizi scolastici. L&apos;obiettivo e&apos; semplice: mostrare cosa e&apos; documentato, cosa manca e dove serve piu trasparenza.
+            Questo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza in tre aree strategiche: scuola, inclusione-disabilita e patrimonio-spazi pubblici. L&apos;obiettivo e&apos; semplice: mostrare cosa e&apos; documentato, cosa manca e dove serve piu trasparenza.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/dashboard" className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800">
@@ -29,7 +29,7 @@ export default function Home() {
           <div className="eyebrow text-white/60">Quadro fiducia</div>
           <div className="mt-5 space-y-5">
             <Metric label="Dossier critici" value={String(severity.red)} note="Nessun segnale rosso nel pilot attuale" />
-            <Metric label="Da attenzionare" value={String(severity.yellow)} note="Dati pubblici incompleti o parziali" />
+            <Metric label="Da attenzionare" value={String(severity.yellow)} note="Dati pubblici incompleti, parziali o non comparabili" />
             <Metric label="Regole pubblicate" value="3" note="Costo, tempo, completezza dei dati" />
           </div>
         </aside>
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="eyebrow">Anteprima dashboard</div>
-            <h2 className="section-title text-slate-950">Un primo registro pubblico sui servizi scolastici piacentini.</h2>
+            <h2 className="section-title text-slate-950">Un primo registro pubblico multi-settore su dossier strategici piacentini.</h2>
           </div>
           <Link href="/dashboard" className="text-sm font-semibold text-teal-800 hover:text-teal-950">
             Vai alla dashboard completa
