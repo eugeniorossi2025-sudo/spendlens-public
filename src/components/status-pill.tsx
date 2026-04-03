@@ -7,9 +7,9 @@ const classes: Record<Severity, string> = {
 };
 
 const labels: Record<Severity, string> = {
-  green: "On track",
-  yellow: "Attention",
-  red: "Critical",
+  green: "Regolare",
+  yellow: "Attenzione",
+  red: "Critico",
 };
 
 export function StatusPill({ tone, label }: { tone: Severity; label?: string }) {

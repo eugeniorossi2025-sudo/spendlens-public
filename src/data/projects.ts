@@ -31,14 +31,14 @@ export const projects: SpendingProject[] = [
   {
     slug: "piacenza-school-meal-quality-control",
     code: "PC-EDU-001",
-    title: "Piacenza school meal quality control service",
+    title: "Controllo qualita della ristorazione scolastica a Piacenza",
     authority: "Comune di Piacenza",
-    location: "Piacenza, Italy",
-    sector: "School services",
-    contractor: "Awardee not identified in the public documents reviewed",
-    procurementMethod: "Official public procurement dossier",
-    statusLabel: "Monitored service",
-    summary: "Official dossier for the quality-control service over school catering in municipal nurseries and state schools. Public sources reviewed show a defined contract window and an estimated value, but not the full award chain in the material examined so far.",
+    location: "Piacenza, Italia",
+    sector: "Servizi scolastici",
+    contractor: "Aggiudicatario non identificato nei documenti pubblici esaminati",
+    procurementMethod: "Dossier pubblico di gara",
+    statusLabel: "Servizio monitorato",
+    summary: "Dossier ufficiale sul servizio di controllo qualita della ristorazione scolastica presso nidi comunali e scuole statali. Le fonti pubbliche esaminate mostrano durata definita e valore stimato, ma non l'intera catena di aggiudicazione nel materiale fin qui verificato.",
     budgetPlanned: 213607.83,
     budgetActual: null,
     timelinePlannedDays: 943,
@@ -49,23 +49,23 @@ export const projects: SpendingProject[] = [
     sourceCount: 3,
     sourceQuality: "medium",
     milestones: [
-      { date: "2023-01-01", label: "Service window opened", note: "The technical dossier reviewed sets the ordinary contract start on 1 January 2023." },
-      { date: "2025-07-31", label: "Ordinary term", note: "The same dossier indicates an ordinary duration up to 31 July 2025." },
-      { date: "2025-2026", label: "Optional continuation", note: "Public text reviewed includes an optional repetition for the 2025-2026 school year and a six-month technical extension scenario." },
-      { date: "2026-04-03", label: "Monitoring note", note: "SpendLens classified this card as yellow because the reviewed public material gives planned value and duration, but not the complete award outcome in the sources checked." }
+      { date: "2023-01-01", label: "Avvio finestra di servizio", note: "Il dossier tecnico esaminato fissa l'avvio ordinario del contratto al 1 gennaio 2023." },
+      { date: "2025-07-31", label: "Scadenza ordinaria", note: "Lo stesso dossier indica una durata ordinaria fino al 31 luglio 2025." },
+      { date: "2025-2026", label: "Prosecuzione opzionale", note: "Nel testo pubblico esaminato compaiono una possibile ripetizione per l'anno scolastico 2025-2026 e una proroga tecnica di sei mesi." },
+      { date: "2026-04-03", label: "Nota di monitoraggio", note: "SpendLens classifica questa scheda in giallo perche il materiale pubblico esaminato fornisce valore pianificato e durata, ma non l'esito completo di aggiudicazione nelle fonti controllate." }
     ]
   },
   {
     slug: "piacenza-school-bus-service",
     code: "PC-EDU-002",
-    title: "Piacenza school bus service",
+    title: "Servizio scuolabus del Comune di Piacenza",
     authority: "Comune di Piacenza",
-    location: "Piacenza, Italy",
-    sector: "School services",
-    contractor: "External operator mentioned, not named on the service page reviewed",
-    procurementMethod: "Official active service page",
-    statusLabel: "Monitored service",
-    summary: "The Comune publishes the school transport service as active for selected schools and explicitly states that it is entrusted to an external company. The reviewed source is useful for service monitoring, but it does not expose contract amount or award details.",
+    location: "Piacenza, Italia",
+    sector: "Servizi scolastici",
+    contractor: "Operatore esterno citato, ma non nominato nella pagina di servizio esaminata",
+    procurementMethod: "Pagina ufficiale di servizio attivo",
+    statusLabel: "Servizio monitorato",
+    summary: "Il Comune pubblica il servizio di trasporto scolastico come attivo per scuole selezionate e dichiara esplicitamente che e' affidato a una ditta esterna. La fonte esaminata e' utile per monitorare il servizio, ma non espone importo contrattuale o dettagli di aggiudicazione.",
     budgetPlanned: null,
     budgetActual: null,
     timelinePlannedDays: null,
@@ -76,23 +76,23 @@ export const projects: SpendingProject[] = [
     sourceCount: 2,
     sourceQuality: "medium",
     milestones: [
-      { date: "2025-09-01", label: "Enrollment reopened", note: "The official page reviewed states that school transport enrollments reopen from 1 September 2025." },
-      { date: "2025-2026", label: "Covered routes published", note: "Public text reviewed lists the schools served and notes that the service runs with two daily trips, Monday to Friday, following the school calendar." },
-      { date: "2025-2026", label: "External contractor noted", note: "The same official page says the service is entrusted to an external company, but does not identify the operator in the extracted content." },
-      { date: "2026-04-03", label: "Monitoring note", note: "SpendLens marks this card yellow because the service is clearly public and active, but the reviewed source does not yet provide tender value, CIG, or award act." }
+      { date: "2025-09-01", label: "Riapertura iscrizioni", note: "La pagina ufficiale esaminata indica che le iscrizioni al trasporto scolastico riaprono dal 1 settembre 2025." },
+      { date: "2025-2026", label: "Percorsi pubblicati", note: "Il testo pubblico esaminato elenca le scuole servite e segnala due corse giornaliere, dal lunedi al venerdi, secondo calendario scolastico." },
+      { date: "2025-2026", label: "Ditta esterna citata", note: "La stessa pagina ufficiale dichiara che il servizio e' affidato a una ditta esterna, ma non identifica l'operatore nel contenuto estratto." },
+      { date: "2026-04-03", label: "Nota di monitoraggio", note: "SpendLens assegna il giallo perche il servizio e' chiaramente pubblico e attivo, ma la fonte esaminata non fornisce ancora importo di gara, CIG o atto di aggiudicazione." }
     ]
   },
   {
     slug: "piacenza-school-disability-integration-service",
     code: "PC-EDU-003",
-    title: "Piacenza school disability integration service",
+    title: "Integrazione scolastica per alunni con disabilita a Piacenza",
     authority: "Comune di Piacenza",
-    location: "Piacenza, Italy",
-    sector: "School services",
-    contractor: "Specialist educational support personnel, operator not named on the service page reviewed",
-    procurementMethod: "Official service page and provincial framework reference",
-    statusLabel: "Monitored service",
-    summary: "The Comune publishes a dedicated integration service for pupils with certified disabilities and links it to the provincial framework agreement for school inclusion. The public page reviewed documents scope and access conditions, but not the underlying procurement amount.",
+    location: "Piacenza, Italia",
+    sector: "Servizi scolastici",
+    contractor: "Personale educativo specialistico, operatore non nominato nella pagina di servizio esaminata",
+    procurementMethod: "Pagina ufficiale di servizio e riferimento provinciale di cornice",
+    statusLabel: "Servizio monitorato",
+    summary: "Il Comune pubblica un servizio dedicato all'integrazione scolastica degli alunni con disabilita certificata e lo collega all'accordo provinciale per l'inclusione scolastica. La pagina pubblica esaminata documenta perimetro e condizioni di accesso, ma non l'importo della procedura sottostante.",
     budgetPlanned: null,
     budgetActual: null,
     timelinePlannedDays: null,
@@ -103,10 +103,10 @@ export const projects: SpendingProject[] = [
     sourceCount: 2,
     sourceQuality: "medium",
     milestones: [
-      { date: "2024-10-31", label: "Service page updated", note: "The official page reviewed was last updated on 31 October 2024." },
-      { date: "School year", label: "Access condition documented", note: "Families request support through the school, with diagnostic certification and UONPIA indication mentioned in the published text." },
-      { date: "School year", label: "Scope extended", note: "The public page reviewed states that the Comune also supports integration in some private or extra-municipal school situations through reimbursements or educational support." },
-      { date: "2026-04-03", label: "Monitoring note", note: "SpendLens classifies this file as yellow because service scope is explicit in public sources, but the reviewed material does not yet expose contract value or operator identity." }
+      { date: "2024-10-31", label: "Pagina aggiornata", note: "La pagina ufficiale esaminata risulta aggiornata al 31 ottobre 2024." },
+      { date: "Anno scolastico", label: "Condizione di accesso documentata", note: "Le famiglie richiedono il supporto tramite la scuola, con documentazione diagnostica e indicazione UONPIA richiamate nel testo pubblicato." },
+      { date: "Anno scolastico", label: "Perimetro esteso", note: "La pagina pubblica esaminata afferma che il Comune sostiene l'inclusione anche in alcuni casi di scuole private o fuori Comune tramite rimborso o supporto educativo." },
+      { date: "2026-04-03", label: "Nota di monitoraggio", note: "SpendLens classifica questo dossier in giallo perche il perimetro del servizio e' esplicito nelle fonti pubbliche, ma il materiale esaminato non espone ancora valore contrattuale o identita dell'operatore." }
     ]
   }
 ];

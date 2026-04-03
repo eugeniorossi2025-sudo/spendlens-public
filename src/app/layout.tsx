@@ -16,7 +16,7 @@ const ibmPlexSans = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: "SpendLens",
-  description: "Every public euro in view.",
+  description: "Ogni euro pubblico in vista.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="it"
       className={`${spaceGrotesk.variable} ${ibmPlexSans.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[var(--canvas)] text-slate-950">
@@ -40,13 +40,13 @@ export default function RootLayout({
                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-950 text-sm font-bold tracking-[0.18em] text-white">SL</div>
                 <div>
                   <div className="font-display text-xl font-semibold tracking-[-0.04em] text-slate-950">SpendLens</div>
-                  <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Public spending clarity</div>
+                  <div className="text-xs uppercase tracking-[0.18em] text-slate-500">Trasparenza sulla spesa pubblica</div>
                 </div>
               </Link>
               <nav className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-600">
                 <Link href="/dashboard" className="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950">Dashboard</Link>
-                <Link href="/methodology" className="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950">Methodology</Link>
-                <Link href="/sources" className="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950">Sources</Link>
+                <Link href="/methodology" className="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950">Metodo</Link>
+                <Link href="/sources" className="rounded-full px-4 py-2 transition hover:bg-white hover:text-slate-950">Fonti</Link>
               </nav>
             </div>
           </header>
@@ -58,25 +58,25 @@ export default function RootLayout({
           <footer className="relative z-10 border-t border-slate-200/70 bg-white/72 backdrop-blur-xl">
             <div className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-8 text-sm text-slate-600 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:px-10">
               <div>
-                <div className="font-display text-lg font-semibold text-slate-950">Every public euro in view.</div>
+                <div className="font-display text-lg font-semibold text-slate-950">Ogni euro pubblico in vista.</div>
                 <p className="mt-3 max-w-md leading-7">
-                  A fast MVP for public trust: clear project status, visible methodology, and open source logic for cost and delay signals.
+                  Un MVP rapido per la fiducia pubblica: stato dei dossier leggibile, metodo visibile e logica aperta per semafori su costo, tempo e completezza dei dati.
                 </p>
               </div>
               <div>
-                <div className="footer-title">Methodology</div>
-                <Link href="/methodology" className="footer-link">Traffic-light rules</Link>
-                <Link href="/methodology" className="footer-link">Scoring logic</Link>
+                <div className="footer-title">Metodo</div>
+                <Link href="/methodology" className="footer-link">Regole semaforiche</Link>
+                <Link href="/methodology" className="footer-link">Logica di valutazione</Link>
               </div>
               <div>
-                <div className="footer-title">Policy</div>
-                <Link href="/policy" className="footer-link">Neutrality statement</Link>
-                <Link href="/policy" className="footer-link">Use policy</Link>
+                <div className="footer-title">Regole</div>
+                <Link href="/policy" className="footer-link">Nota di neutralità</Link>
+                <Link href="/policy" className="footer-link">Regole d&apos;uso</Link>
               </div>
               <div>
-                <div className="footer-title">Sources</div>
-                <Link href="/sources" className="footer-link">Data provenance</Link>
-                <Link href="/dashboard" className="footer-link">Project register</Link>
+                <div className="footer-title">Fonti</div>
+                <Link href="/sources" className="footer-link">Provenienza dei dati</Link>
+                <Link href="/dashboard" className="footer-link">Registro dossier</Link>
               </div>
             </div>
           </footer>

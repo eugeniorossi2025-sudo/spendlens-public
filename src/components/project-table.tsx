@@ -12,12 +12,12 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
         <table className="min-w-full border-collapse text-left">
           <thead>
             <tr className="border-b border-slate-200/80 text-xs uppercase tracking-[0.16em] text-slate-500">
-              <th className="px-6 py-4 font-medium">Project</th>
-              <th className="px-6 py-4 font-medium">Status</th>
-              <th className="px-6 py-4 font-medium">Cost</th>
-              <th className="px-6 py-4 font-medium">Time</th>
-              <th className="px-6 py-4 font-medium">Data</th>
-              <th className="px-6 py-4 font-medium">Updated</th>
+              <th className="px-6 py-4 font-medium">Dossier</th>
+              <th className="px-6 py-4 font-medium">Stato</th>
+              <th className="px-6 py-4 font-medium">Costo</th>
+              <th className="px-6 py-4 font-medium">Tempo</th>
+              <th className="px-6 py-4 font-medium">Dati</th>
+              <th className="px-6 py-4 font-medium">Aggiornato</th>
             </tr>
           </thead>
           <tbody>
@@ -37,17 +37,17 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                   <td className="px-6 py-5"><StatusPill tone={health.overall} /></td>
                   <td className="px-6 py-5 text-sm text-slate-700">
                     <div className="font-medium text-slate-950">{formatCurrency(project.budgetActual)}</div>
-                    <div>{formatPercent(health.costDeltaPct)} vs plan</div>
+                    <div>{formatPercent(health.costDeltaPct)} rispetto al piano</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">
                     <div className="font-medium text-slate-950">
-                      {project.timelineActualDays === null ? "Data pending" : `${project.timelineActualDays} d`}
+                      {project.timelineActualDays === null ? "Dati non disponibili" : `${project.timelineActualDays} g`}
                     </div>
-                    <div>{formatPercent(health.timeDeltaPct)} vs plan</div>
+                    <div>{formatPercent(health.timeDeltaPct)} rispetto al piano</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">
-                    <div className="font-medium text-slate-950">{project.dataCoveragePct}% complete</div>
-                    <div>{project.sourceCount} sources</div>
+                    <div className="font-medium text-slate-950">{project.dataCoveragePct}% coperto</div>
+                    <div>{project.sourceCount} fonti</div>
                   </td>
                   <td className="px-6 py-5 text-sm text-slate-700">{project.updatedAt}</td>
                 </tr>

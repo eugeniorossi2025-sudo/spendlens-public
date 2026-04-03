@@ -1,3 +1,4 @@
+import { projects } from "@/data/projects";
 import { countBySeverity, formatCurrency, totalsSnapshot } from "@/lib/status";
 
 export function SummaryCards() {
@@ -6,24 +7,24 @@ export function SummaryCards() {
 
   const cards = [
     {
-      title: "Projects monitored",
-      value: "6",
-      note: `${severity.red} critical · ${severity.yellow} attention`,
+      title: "Dossier monitorati",
+      value: String(projects.length),
+      note: `${severity.red} critici · ${severity.yellow} da attenzionare`,
     },
     {
-      title: "Planned public budget",
+      title: "Budget pubblico pianificato",
       value: formatCurrency(totals.planned),
-      note: "Budget baseline across the current portfolio",
+      note: "Somma degli importi pianificati oggi pubblicamente visibili",
     },
     {
-      title: "Declared actual cost",
+      title: "Costo effettivo dichiarato",
       value: formatCurrency(totals.actual),
-      note: "Published actuals only, excluding missing updates",
+      note: "Solo valori pubblicati, esclusi gli aggiornamenti mancanti",
     },
     {
-      title: "Methodology confidence",
-      value: "High",
-      note: "Traffic-light rules and data coverage disclosed openly",
+      title: "Affidabilità metodo",
+      value: "Alta",
+      note: "Regole semaforiche e copertura dati dichiarate apertamente",
     },
   ];
 

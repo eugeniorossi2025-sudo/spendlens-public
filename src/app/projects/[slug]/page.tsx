@@ -15,21 +15,21 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const health = evaluateProject(project);
 
   const stats = [
-    { label: "Planned cost", value: formatCurrency(project.budgetPlanned) },
-    { label: "Actual cost", value: formatCurrency(project.budgetActual) },
-    { label: "Cost variance", value: formatPercent(health.costDeltaPct) },
-    { label: "Planned time", value: project.timelinePlannedDays === null ? "Data pending" : `${project.timelinePlannedDays} days` },
-    { label: "Actual time", value: project.timelineActualDays === null ? "Data pending" : `${project.timelineActualDays} days` },
-    { label: "Time variance", value: formatPercent(health.timeDeltaPct) },
-    { label: "Completion", value: `${project.completionPct}%` },
-    { label: "Sources", value: `${project.sourceCount} verified sources` },
+    { label: "Costo pianificato", value: formatCurrency(project.budgetPlanned) },
+    { label: "Costo effettivo", value: formatCurrency(project.budgetActual) },
+    { label: "Scostamento costo", value: formatPercent(health.costDeltaPct) },
+    { label: "Tempo pianificato", value: project.timelinePlannedDays === null ? "Dati non disponibili" : `${project.timelinePlannedDays} giorni` },
+    { label: "Tempo effettivo", value: project.timelineActualDays === null ? "Dati non disponibili" : `${project.timelineActualDays} giorni` },
+    { label: "Scostamento tempo", value: formatPercent(health.timeDeltaPct) },
+    { label: "Completamento", value: `${project.completionPct}%` },
+    { label: "Fonti", value: `${project.sourceCount} fonti verificate` },
   ];
 
   return (
     <div className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <Link href="/dashboard" className="text-sm font-medium text-teal-800 hover:text-teal-950">
-          Back to dashboard
+          Torna alla dashboard
         </Link>
         <StatusPill tone={health.overall} />
       </div>
@@ -40,25 +40,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <h1 className="display-title mt-3 text-slate-950">{project.title}</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">{project.summary}</p>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-500">
-            This card is a public-information dossier. Its traffic light is an editorial indicator based on published records reviewed by SpendLens and is not an accusation or a legal finding.
+            Questa scheda e&apos; un dossier informativo pubblico. Il suo semaforo e&apos; un indicatore editoriale basato su atti pubblicati esaminati da SpendLens e non costituisce un&apos;accusa o una valutazione legale.
           </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <Info label="Authority" value={project.authority} />
-            <Info label="Location" value={project.location} />
-            <Info label="Contractor" value={project.contractor} />
-            <Info label="Procurement" value={project.procurementMethod} />
-            <Info label="Stage" value={project.statusLabel} />
-            <Info label="Last update" value={project.updatedAt} />
+            <Info label="Ente" value={project.authority} />
+            <Info label="Luogo" value={project.location} />
+            <Info label="Operatore" value={project.contractor} />
+            <Info label="Procedura" value={project.procurementMethod} />
+            <Info label="Stato" value={project.statusLabel} />
+            <Info label="Ultimo aggiornamento" value={project.updatedAt} />
           </div>
         </article>
 
         <aside className="rounded-[32px] border border-white/60 bg-slate-950 p-8 text-white shadow-[0_20px_80px_rgba(10,37,64,0.16)]">
-          <div className="eyebrow text-white/60">Project health</div>
+          <div className="eyebrow text-white/60">Salute del dossier</div>
           <div className="mt-4 flex flex-wrap gap-3">
-            <StatusPill tone={health.cost} label="Cost" />
-            <StatusPill tone={health.time} label="Time" />
-            <StatusPill tone={health.data} label="Data" />
+            <StatusPill tone={health.cost} label="Costo" />
+            <StatusPill tone={health.time} label="Tempo" />
+            <StatusPill tone={health.data} label="Dati" />
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {stats.map((stat) => (
@@ -72,8 +72,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </section>
 
       <section className="rounded-[32px] border border-white/60 bg-white/88 p-8 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">
-        <div className="eyebrow">Timeline</div>
-        <h2 className="section-title mt-3 text-slate-950">Audit trail</h2>
+        <div className="eyebrow">Cronologia</div>
+        <h2 className="section-title mt-3 text-slate-950">Traccia documentale</h2>
         <div className="mt-8 space-y-5">
           {project.milestones.map((item) => (
             <div key={`${project.slug}-${item.date}-${item.label}`} className="grid gap-3 rounded-[22px] border border-slate-200/80 bg-slate-50/80 p-5 md:grid-cols-[140px_minmax(0,1fr)]">

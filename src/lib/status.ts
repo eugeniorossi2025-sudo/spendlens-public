@@ -64,8 +64,8 @@ export function evaluateProject(project: SpendingProject): ProjectHealth {
 }
 
 export function formatCurrency(value: number | null) {
-  if (value === null || !Number.isFinite(value)) return "Data pending";
-  return new Intl.NumberFormat("en-GB", {
+  if (value === null || !Number.isFinite(value)) return "Dati non disponibili";
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: "EUR",
     maximumFractionDigits: 0,
@@ -73,7 +73,7 @@ export function formatCurrency(value: number | null) {
 }
 
 export function formatPercent(value: number | null) {
-  if (value === null || !Number.isFinite(value)) return "Data pending";
+  if (value === null || !Number.isFinite(value)) return "Dati non disponibili";
   return `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`;
 }
 
