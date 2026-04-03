@@ -13,9 +13,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   }
 
   const health = evaluateProject(project);
+  const concessionEstimatedValue = getConcessionEstimatedValue(project);
 
   const stats = [
-    { label: project.valueKind === "concession-estimate" ? "Valore concessione" : "Costo pianificato", value: project.valueKind === "concession-estimate" ? formatCurrency(Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0)) : formatCurrency(project.budgetPlanned) },
+    { label: project.valueKind === "concession-estimate" ? "Valore concessione" : "Costo pianificato", value: project.valueKind === "concession-estimate" ? concessionEstimatedValue : formatCurrency(project.budgetPlanned) },
     { label: project.valueKind === "concession-estimate" ? "Qualifica valore" : "Costo effettivo", value: project.valueKind === "concession-estimate" ? project.valueNote : formatCurrency(project.budgetActual) },
     { label: "Scostamento costo", value: project.valueKind === "concession-estimate" ? "Non comparabile come spesa diretta" : formatPercent(health.costDeltaPct) },
     { label: "Tempo pianificato", value: project.timelinePlannedDays === null ? "Dati non disponibili" : `${project.timelinePlannedDays} giorni` },
@@ -151,4 +152,15 @@ function Info({ label, value }: { label: string; value: string }) {
       <div className="mt-2 text-base font-semibold text-slate-950">{value}</div>
     </div>
   );
+}
+
+function getConcessionEstimatedValue(project: NonNullable<ReturnType<typeof getProjectBySlug>>) {
+  const numericValue = Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0);
+
+  if (numericValue > 0) {
+    return formatCurrency(numericValue);
+  }
+
+  const estimateEvidence = project.evidence.find((item) => item.label.toLowerCase().includes("valore complessivo stimato"));
+  return estimateEvidence?.value ?? "Dati non disponibili";
 }
