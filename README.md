@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SpendLens
 
-## Getting Started
+Every public euro in view.
 
-First, run the development server:
+SpendLens is a fast MVP for public spending transparency. It is designed to make public project delivery legible in seconds through a clean dashboard, explicit traffic-light rules, and visible data provenance.
+
+## Why this exists
+
+Most public spending portals publish a lot of data but make risk hard to read. SpendLens starts from a different premise:
+
+- cost drift should be obvious
+- time drift should be obvious
+- missing data should be obvious
+- trust should be earned through clear methodology, not slogans
+
+## MVP structure
+
+- Homepage with concept, trust panel, and dashboard preview
+- Dashboard with project register and traffic-light logic
+- Project detail pages with audit trail and mock chronology
+- Methodology, policy, and sources pages for trust and credibility
+
+## Traffic-light logic
+
+- Cost overrun greater than 20%: red
+- Time delay greater than 30%: red
+- Missing or incomplete data: yellow
+
+## Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Mock data for immediate deployment
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Production build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+This app is designed for fast deployment on Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npx vercel
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future expansion
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Replace mock data with API-backed project feeds
+- Add filters, maps, and public alerts
+- Add organisation, programme, and geography views
+- Move validation and ingestion into a dedicated backend later
