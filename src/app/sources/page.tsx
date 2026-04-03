@@ -7,10 +7,10 @@ export default function SourcesPage() {
       </div>
       <div className="rounded-[28px] border border-white/60 bg-white/88 p-8 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">
         <ul className="space-y-4 text-base leading-8 text-slate-700">
-          <li>Procurement notices and award registers</li>
-          <li>Budget and programme monitoring publications</li>
-          <li>Project progress bulletins and official updates</li>
-          <li>Open data files and machine-readable exports</li>
+          <li>Official Comune di Piacenza service pages</li>
+          <li>Public procurement dossiers published through the Comune procurement portal</li>
+          <li>Service regulations, operational sheets and framework references published by the administration</li>
+          <li>Direct document extraction from official public PDFs when portal pages expose only partial metadata</li>
         </ul>
       </div>
     </div>

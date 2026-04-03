@@ -18,7 +18,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     { label: "Planned cost", value: formatCurrency(project.budgetPlanned) },
     { label: "Actual cost", value: formatCurrency(project.budgetActual) },
     { label: "Cost variance", value: formatPercent(health.costDeltaPct) },
-    { label: "Planned time", value: `${project.timelinePlannedDays} days` },
+    { label: "Planned time", value: project.timelinePlannedDays === null ? "Data pending" : `${project.timelinePlannedDays} days` },
     { label: "Actual time", value: project.timelineActualDays === null ? "Data pending" : `${project.timelineActualDays} days` },
     { label: "Time variance", value: formatPercent(health.timeDeltaPct) },
     { label: "Completion", value: `${project.completionPct}%` },
@@ -39,6 +39,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <div className="eyebrow">{project.code} · {project.sector}</div>
           <h1 className="display-title mt-3 text-slate-950">{project.title}</h1>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">{project.summary}</p>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-500">
+            This card is a public-information dossier. Its traffic light is an editorial indicator based on published records reviewed by SpendLens and is not an accusation or a legal finding.
+          </p>
 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Info label="Authority" value={project.authority} />

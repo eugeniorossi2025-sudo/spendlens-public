@@ -17,8 +17,8 @@ const severityWeight: Record<Severity, number> = {
   red: 2,
 };
 
-export function calculateDeltaPct(actual: number | null, planned: number): number | null {
-  if (actual === null || !Number.isFinite(actual) || !Number.isFinite(planned) || planned <= 0) {
+export function calculateDeltaPct(actual: number | null, planned: number | null): number | null {
+  if (actual === null || planned === null || !Number.isFinite(actual) || !Number.isFinite(planned) || planned <= 0) {
     return null;
   }
   return ((actual - planned) / planned) * 100;
@@ -91,7 +91,7 @@ export function countBySeverity() {
 export function totalsSnapshot() {
   return projects.reduce(
     (acc, project) => {
-      acc.planned += project.budgetPlanned;
+      acc.planned += project.budgetPlanned ?? 0;
       acc.actual += project.budgetActual ?? 0;
       return acc;
     },
