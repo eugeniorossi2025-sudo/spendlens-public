@@ -4,7 +4,9 @@ import { evaluateProject, formatCurrency, formatPercent } from "@/lib/status";
 import { StatusPill } from "@/components/status-pill";
 
 export function ProjectTable({ compact = false }: { compact?: boolean }) {
-  const rows = compact ? projects.slice(0, 6) : projects;
+  const rows = [...projects]
+    .sort((left, right) => dossierWeight(right) - dossierWeight(left))
+    .slice(0, compact ? 6 : projects.length);
 
   return (
     <div className="overflow-hidden rounded-[28px] border border-white/60 bg-white/88 shadow-[0_20px_80px_rgba(10,37,64,0.10)] backdrop-blur">
@@ -32,6 +34,11 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                         {project.title}
                       </Link>
                       <div className="text-sm text-slate-600">{project.location} · {project.authority}</div>
+                      {dossierWeight(project) >= 1_000_000 ? (
+                        <div className="inline-flex w-fit items-center rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-rose-800">
+                          Appalto ad alto valore
+                        </div>
+                      ) : null}
                       <div className={`text-xs font-medium ${project.dossierStrength === "strong" ? "text-teal-700" : "text-amber-700"}`}>
                         {project.dossierNote}
                       </div>
@@ -61,4 +68,8 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
       </div>
     </div>
   );
+}
+
+function dossierWeight(project: (typeof projects)[number]) {
+  return Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0);
 }

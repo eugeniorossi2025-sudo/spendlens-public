@@ -11,9 +11,9 @@ export default function Home() {
       <section className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_420px] lg:items-end">
         <div className="space-y-6">
           <div className="eyebrow">Progetto pilota Piacenza</div>
-          <h1 className="display-title max-w-5xl text-slate-950">Nove dossier su servizi scolastici, inclusione e patrimonio pubblico.</h1>
+          <h1 className="display-title max-w-5xl text-slate-950">Appalti seri di Piacenza: quelli con piu soldi e con piu tracce pubbliche.</h1>
           <p className="max-w-3xl text-lg leading-8 text-slate-600">
-            Questo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza in tre aree strategiche: scuola, inclusione-disabilita e patrimonio-spazi pubblici. L&apos;obiettivo e&apos; semplice: mostrare cosa e&apos; documentato, cosa manca e dove serve piu trasparenza.
+            Questo progetto pilota italiano segue documenti ufficiali del Comune di Piacenza e mette davanti i dossier con piu peso economico e piu rilevanza strategica. L&apos;obiettivo e&apos; semplice: mostrare dove passano i soldi grossi, cosa e&apos; documentato e dove mancano ancora pezzi decisivi.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href="/dashboard" className="inline-flex items-center justify-center rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-800">
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-5 space-y-5">
             <Metric label="Dossier critici" value={String(severity.red)} note="Nessun segnale rosso nel pilot attuale" />
             <Metric label="Da attenzionare" value={String(severity.yellow)} note="Dati pubblici incompleti, parziali o non comparabili" />
-            <Metric label="Regole pubblicate" value="3" note="Costo, tempo, completezza dei dati" />
+            <Metric label="Soldi grossi tracciati" value="100M+" note="Concessioni e affidamenti con massa economica visibile" />
           </div>
         </aside>
       </section>
@@ -65,7 +65,7 @@ export default function Home() {
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <div className="eyebrow">Anteprima dashboard</div>
-            <h2 className="section-title text-slate-950">Un primo registro pubblico multi-settore su dossier strategici piacentini.</h2>
+            <h2 className="section-title text-slate-950">Un registro che parte dai dossier economicamente piu pesanti.</h2>
           </div>
           <Link href="/dashboard" className="text-sm font-semibold text-teal-800 hover:text-teal-950">
             Vai alla dashboard completa

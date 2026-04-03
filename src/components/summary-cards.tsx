@@ -6,6 +6,8 @@ export function SummaryCards() {
   const totals = totalsSnapshot();
   const strongDossiers = projects.filter((project) => project.dossierStrength === "strong").length;
   const partialDossiers = projects.filter((project) => project.dossierStrength === "partial").length;
+  const topDossier = [...projects].sort((left, right) => dossierWeight(right) - dossierWeight(left))[0];
+  const highValueDossiers = projects.filter((project) => dossierWeight(project) >= 1_000_000).length;
 
   const cards = [
     {
@@ -14,19 +16,19 @@ export function SummaryCards() {
       note: `${strongDossiers} forti · ${partialDossiers} parziali · ${severity.yellow} da attenzionare`,
     },
     {
-      title: "Budget pubblico pianificato",
-      value: formatCurrency(totals.planned),
-      note: "Somma degli importi pianificati oggi pubblicamente visibili",
+      title: "Dossier ad alto valore",
+      value: String(highValueDossiers),
+      note: "Procedure con valore pubblico visibile pari o superiore a 1 milione di euro",
     },
     {
-      title: "Costo effettivo dichiarato",
-      value: formatCurrency(totals.actual),
-      note: "Include valori di affidamento o offerta vincente quando pubblicati",
+      title: "Valore piu alto tracciato",
+      value: topDossier ? formatCurrency(dossierWeight(topDossier)) : "Dati non disponibili",
+      note: topDossier ? topDossier.title : "Nessun dossier con valore economico visibile",
     },
     {
-      title: "Affidabilità metodo",
-      value: "Alta",
-      note: "Regole semaforiche, forza del dossier e buchi documentali dichiarati apertamente",
+      title: "Massa economica visibile",
+      value: formatCurrency(Math.max(totals.planned, totals.actual)),
+      note: "Somma oggi piu leggibile tra pianificato pubblico e valori di affidamento pubblicati",
     },
   ];
 
@@ -41,4 +43,8 @@ export function SummaryCards() {
       ))}
     </div>
   );
+}
+
+function dossierWeight(project: (typeof projects)[number]) {
+  return Math.max(project.budgetActual ?? 0, project.budgetPlanned ?? 0);
 }
