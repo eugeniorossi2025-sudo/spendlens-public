@@ -42,6 +42,12 @@ export function ProjectTable({ compact = false }: { compact?: boolean }) {
                       <div className={`text-xs font-medium ${project.dossierStrength === "strong" ? "text-teal-700" : "text-amber-700"}`}>
                         {project.dossierNote}
                       </div>
+                      <div className="text-xs font-medium text-teal-800">
+                        <Link href={`/projects/${project.slug}`} className="hover:text-teal-950">
+                          Apri dossier e fonti ufficiali
+                        </Link>
+                        {project.sources.some((source) => source.url) ? ` · ${project.sources.filter((source) => source.url).length} link disponibili` : " · link esterni non ancora pubblicati"}
+                      </div>
                     </div>
                   </td>
                   <td className="px-6 py-5"><StatusPill tone={health.overall} /></td>
