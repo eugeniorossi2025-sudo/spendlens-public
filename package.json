@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "research:piacenza": "tsx scripts/research-piacenza.ts",
+    "build:dossiers": "tsx scripts/build-dossiers-from-research.ts",
+    "publish:content": "npm run research:piacenza && npm run build:dossiers && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "16.2.2",
@@ -21,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

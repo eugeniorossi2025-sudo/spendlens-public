@@ -1,3 +1,5 @@
+import { generatedPiacenzaDossiers } from "./generated/piacenza-dossiers-2026-05-10";
+
 export type ProjectTimelineEvent = {
   date: string;
   label: string;
@@ -24,7 +26,7 @@ export type SpendingProject = {
   authority: string;
   location: string;
   sector: string;
-  contractor: string;
+  contractor: string | null;
   procurementMethod: string;
   statusLabel: string;
   summary: string;
@@ -47,7 +49,7 @@ export type SpendingProject = {
   milestones: ProjectTimelineEvent[];
 };
 
-export const projects: SpendingProject[] = [
+export const curatedProjects: SpendingProject[] = [
   {
     slug: "piacenza-school-meal-quality-control",
     code: "PC-EDU-001",
@@ -593,6 +595,11 @@ export const projects: SpendingProject[] = [
       { date: "2026-04-03", label: "Nota di monitoraggio", note: "Dossier forte per allineamento tra portale comunale e pubblicazione legale ANAC." },
     ]
   }
+];
+
+export const projects: SpendingProject[] = [
+  ...generatedPiacenzaDossiers,
+  ...curatedProjects,
 ];
 
 export function getProjectBySlug(slug: string) {

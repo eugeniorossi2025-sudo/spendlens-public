@@ -55,7 +55,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <Info label="Ente" value={project.authority} />
             <Info label="Luogo" value={project.location} />
-            <Info label="Operatore" value={project.contractor} />
+            <Info label="Operatore" value={project.contractor ?? "Non disponibile"} />
             <Info label="Procedura" value={project.procurementMethod} />
             <Info label="Stato" value={project.statusLabel} />
             <Info label="Ultimo aggiornamento" value={project.updatedAt} />
