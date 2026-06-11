@@ -20,7 +20,7 @@ export function buildDossiersFromResearch(
   const generatedAt = options.generatedAt ?? new Date();
   const findings = Array.isArray(research.findings) ? research.findings : [];
   if (findings.length > 0) {
-    return findings.map((finding, index) => buildProjectFromFinding(research, finding, generatedAt, index));
+    return ensureUniqueSlugs(findings.map((finding, index) => buildProjectFromFinding(research, finding, generatedAt, index)));
   }
 
   const facts = Array.isArray(research.facts) ? research.facts : [];
@@ -356,6 +356,25 @@ function hasFact(facts: RawResearchFact[], label: string) {
 
 function firstFactValue(facts: RawResearchFact[], label: string) {
   return facts.find((fact) => fact.label.toLowerCase().includes(label.toLowerCase()))?.value ?? label;
+}
+
+function ensureUniqueSlugs(dossiers: SpendingProject[]) {
+  const seen = new Map<string, number>();
+
+  return dossiers.map((dossier) => {
+    const seenCount = seen.get(dossier.slug) ?? 0;
+    seen.set(dossier.slug, seenCount + 1);
+
+    if (seenCount === 0) {
+      return dossier;
+    }
+
+    const suffix = `-${seenCount + 1}`;
+    return {
+      ...dossier,
+      slug: `${dossier.slug.slice(0, 90 - suffix.length)}${suffix}`,
+    };
+  });
 }
 
 function slugify(value: string) {
