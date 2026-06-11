@@ -5,6 +5,7 @@ type CheckResult = {
   warnings: string[];
 };
 
+async function main() {
 const result: CheckResult = {
   errors: [],
   warnings: [],
@@ -82,6 +83,8 @@ if (result.errors.length > 0) {
   process.exitCode = 1;
 }
 
+}
+
 async function checkSourceUrls(): Promise<CheckResult> {
   const output: CheckResult = { errors: [], warnings: [] };
   const urls = [...new Set(projects.flatMap((project) => project.sources.map((source) => source.url).filter(Boolean)))] as string[];
@@ -133,3 +136,9 @@ async function probeUrl(url: string) {
     clearTimeout(timer);
   }
 }
+
+
+main().catch((error) => {
+  console.error("[validate] failed", error);
+  process.exitCode = 1;
+});
