@@ -8,6 +8,7 @@ const LIVE_BASE_URL = "https://public-spending-mvp.vercel.app";
 const REPORT_DIR = path.join(process.cwd(), "docs", "spendagent", "reports");
 const today = new Date().toISOString().slice(0, 10);
 
+async function main() {
 const routeStatuses = await checkRoutes([
   "/",
   "/dashboard",
@@ -98,6 +99,8 @@ Oppure avvia manualmente il workflow \`SpendAgent Publish Approved\` indicando i
 `;
 }
 
+}
+
 async function checkRoutes(paths: string[]) {
   const checks = [];
   for (const routePath of paths) {
@@ -123,3 +126,9 @@ async function resolveLiveHost() {
 function escapeCell(value: string) {
   return value.replace(/\|/g, "\\|").replace(/\n/g, " ");
 }
+
+
+main().catch((error) => {
+  console.error("[spendagent] report failed", error);
+  process.exitCode = 1;
+});
