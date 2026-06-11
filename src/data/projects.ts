@@ -1,4 +1,4 @@
-import { generatedPiacenzaDossiers } from "./generated/piacenza-dossiers-2026-05-10";
+import { generatedPiacenzaDossiers } from "./generated/piacenza-dossiers-latest";
 
 export type ProjectTimelineEvent = {
   date: string;
