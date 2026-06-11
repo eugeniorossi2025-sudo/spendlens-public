@@ -1,0 +1,65 @@
+name: SpendAgent Publish Approved
+
+on:
+  issue_comment:
+    types: [created]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Pull request number to publish"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+
+jobs:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.issue.pull_request && contains(github.event.comment.body, 'APPROVATO PUBBLICA'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve approval
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_NAME: ${{ github.event_name }}
+          COMMENT_ASSOCIATION: ${{ github.event.comment.author_association }}
+          COMMENT_PR_NUMBER: ${{ github.event.issue.number }}
+          INPUT_PR_NUMBER: ${{ inputs.pr_number }}
+        run: |
+          if [ "$EVENT_NAME" = "issue_comment" ]; then
+            case "$COMMENT_ASSOCIATION" in
+              OWNER|MEMBER|COLLABORATOR) ;;
+              *) echo "Comment author is not allowed to approve publishing: $COMMENT_ASSOCIATION"; exit 1 ;;
+            esac
+            echo "PR_NUMBER=$COMMENT_PR_NUMBER" >> "$GITHUB_ENV"
+          else
+            echo "PR_NUMBER=$INPUT_PR_NUMBER" >> "$GITHUB_ENV"
+          fi
+
+      - name: Merge approved PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr view "$PR_NUMBER" --json number,title,headRefName,mergeable,state
+          gh pr merge "$PR_NUMBER" --squash --delete-branch --subject "spendagent: publish approved content refresh"
+
+      - name: Wait for Vercel
+        run: sleep 120
+
+      - name: Smoke live app
+        run: |
+          node - <<'NODE'
+          const routes = ['/', '/dashboard', '/methodology', '/sources', '/policy'];
+          const base = 'https://public-spending-mvp.vercel.app';
+          let failed = false;
+          for (const route of routes) {
+            const response = await fetch(`${base}${route}`, { redirect: 'follow' });
+            console.log(`${route} ${response.status}`);
+            if (!response.ok) failed = true;
+          }
+          if (failed) process.exit(1);
+          NODE
