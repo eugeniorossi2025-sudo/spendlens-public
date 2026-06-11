@@ -51,8 +51,14 @@ async function main() {
 
   console.log(`[research] sources collected=${sources.length}`);
 
+  const prioritySources = sources.filter((source) => isPriorityPublicHost(source.url));
+  const discardedSources = sources.length - prioritySources.length;
+  if (discardedSources > 0) {
+    console.log(`[research] discarded non-priority sources=${discardedSources}`);
+  }
+
   const classifiedSources: ClassifiedSource[] = [];
-  for (const source of sources) {
+  for (const source of prioritySources) {
     console.log(`[research] fetching ${source.url}`);
     const extracted = await extractSource(source);
     const classified = classifySource(extracted);
