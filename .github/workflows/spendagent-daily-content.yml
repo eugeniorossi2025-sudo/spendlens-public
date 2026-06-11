@@ -1,0 +1,46 @@
+name: SpendAgent Daily Content
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  daily-content:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh content and build report
+        run: npm run publish:content
+
+      - name: Set report date
+        run: echo "REPORT_DATE=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Create approval pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: spendagent/daily-content-${{ env.REPORT_DATE }}
+          delete-branch: true
+          commit-message: "chore(content): daily SpendLens refresh"
+          title: "spendagent: daily content refresh ${{ env.REPORT_DATE }}"
+          body-path: docs/spendagent/reports/latest.md
+          labels: |
+            spendagent
+            content-refresh
+          committer: SpendAgent <spendagent@users.noreply.github.com>
+          author: SpendAgent <spendagent@users.noreply.github.com>

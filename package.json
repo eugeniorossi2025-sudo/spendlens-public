@@ -9,7 +9,9 @@
     "lint": "eslint",
     "research:piacenza": "tsx scripts/research-piacenza.ts",
     "build:dossiers": "tsx scripts/build-dossiers-from-research.ts",
-    "publish:content": "npm run research:piacenza && npm run build:dossiers && npm run lint && npm run build"
+    "validate:dossiers": "tsx scripts/validate-dossiers.ts",
+    "spendagent:report": "tsx scripts/spendagent-report.ts",
+    "publish:content": "npm run research:piacenza && npm run build:dossiers && npm run validate:dossiers && npm run spendagent:report && npm run lint && npm run build"
   },
   "dependencies": {
     "next": "16.2.2",
