@@ -23,9 +23,13 @@ async function main() {
   await mkdir(generatedDir, { recursive: true });
 
   const outPath = path.join(generatedDir, `piacenza-dossiers-${datePart}.ts`);
-  await writeFile(outPath, renderTypeScriptOutput(dossiers), "utf8");
+  const output = renderTypeScriptOutput(dossiers);
+  await writeFile(outPath, output, "utf8");
+  const latestPath = path.join(generatedDir, "piacenza-dossiers-latest.ts");
+  await writeFile(latestPath, output, "utf8");
 
   console.log(`[dossier] wrote ${outPath}`);
+  console.log(`[dossier] wrote ${latestPath}`);
   console.log(`[dossier] dossiers=${dossiers.length}`);
 }
 
