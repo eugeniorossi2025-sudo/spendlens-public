@@ -1,0 +1,66 @@
+{
+  "title": "Portale Appalti Comune di Piacenza - Gare",
+  "authority": "Comune di Piacenza",
+  "location": "Piacenza",
+  "sources": [
+    {
+      "title": "Portale Appalti Comune di Piacenza - Gare",
+      "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_bandi_lista.wp",
+      "sourceKind": "portale-appalti",
+      "confidence": "medium",
+      "fetchedAt": "2026-07-20T07:20:38.247Z",
+      "status": null,
+      "contentType": null
+    },
+    {
+      "title": "Portale Appalti Comune di Piacenza - Esiti",
+      "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+      "sourceKind": "portale-appalti",
+      "confidence": "medium",
+      "fetchedAt": "2026-07-20T07:23:01.757Z",
+      "status": null,
+      "contentType": null
+    },
+    {
+      "title": "Comune di Piacenza",
+      "url": "https://www.comune.piacenza.it/",
+      "sourceKind": "comune-piacenza",
+      "confidence": "medium",
+      "fetchedAt": "2026-07-20T07:25:25.117Z",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8"
+    }
+  ],
+  "rawText": "403 403 Forbidden",
+  "budgetPlanned": null,
+  "contractor": null,
+  "dates": [],
+  "keywords": [
+    "comune di piacenza"
+  ],
+  "facts": [],
+  "findings": [
+    {
+      "title": "Affidamento pubblico Piacenza",
+      "sourceUrl": "https://www.comune.piacenza.it/",
+      "authority": "Comune di Piacenza",
+      "location": "Piacenza",
+      "cig": null,
+      "cup": null,
+      "contractor": null,
+      "budgetPlanned": null,
+      "procurementMethod": null,
+      "publicationDate": null,
+      "deadline": null,
+      "statusLabel": null,
+      "rawText": "403 403 Forbidden",
+      "confidence": "low"
+    }
+  ],
+  "missingFacts": [
+    "Importo/base di gara non estratto automaticamente.",
+    "Aggiudicatario/affidatario non estratto automaticamente.",
+    "Date procedurali non estratte automaticamente.",
+    "Fonte ANAC non collegata in questa ricerca."
+  ]
+}
