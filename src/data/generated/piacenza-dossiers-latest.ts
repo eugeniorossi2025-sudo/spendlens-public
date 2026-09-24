@@ -4,9 +4,9 @@ import type { SpendingProject } from "../projects";
 // Review manually before merging into projects.ts.
 export const generatedPiacenzaDossiers = [
   {
-    "slug": "piacenza-affidamento-ai-sensi-dell-art-50-comma-1-lett-b-del-servizio-di-gestione-del-parc",
-    "code": "PC-RAW-20260510-01",
-    "title": "AFFIDAMENTO AI SENSI DELL'ART. 50 COMMA 1 LETT.) B DEL SERVIZIO DI GESTIONE DEL PARCHEGGIO VELOCIPEDI / MOTOCICLI / AUTOVEICOLI E DEI SERVIZI DI BIKE SHARING, MANUTENZIONE DELLE BICICLETTE COMUNALI E MARCATURA BICI PRESSO LA STAZIONE FERROVIARIA DI P. LE MARCONI PER IL PERIODO 1&#xB0; APRILE 2026 (O COMUNQUE DALLA DATA DEL VERBALE DI CONSEGNA DEL SERVIZIO) AL 31 MARZO 2027.",
+    "slug": "piacenza-affidamento-ai-sensi-dell-art-50-comma-1-lett-b-del-d-lgs-36-2023-del-servizio-di",
+    "code": "PC-RAW-20260924-01",
+    "title": "AFFIDAMENTO, AI SENSI DELL'ART.. 50, COMMA 1 LETT. B) DEL D. LGS. 36/2023, DEL SERVIZIO DI CENSIMENTO, RICONDIZIONATURA E SCARTO DEGLI ATTI DEL SERVIZIO LAVORI PUBBLICI DEL COMUNE DI PIACENZA",
     "authority": "Comune di Piacenza",
     "location": "Piacenza, Italia",
     "sector": "Spesa pubblica locale",
@@ -19,7 +19,7 @@ export const generatedPiacenzaDossiers = [
     "timelinePlannedDays": null,
     "timelineActualDays": null,
     "completionPct": 0,
-    "updatedAt": "2026-05-10",
+    "updatedAt": "2026-09-24",
     "dataCoveragePct": 60,
     "sourceCount": 1,
     "sourceQuality": "medium",
@@ -30,7 +30,7 @@ export const generatedPiacenzaDossiers = [
     "evidence": [
       {
         "label": "CIG",
-        "value": "BB063D0302 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "BD155C5EE7 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Procedura",
@@ -38,7 +38,7 @@ export const generatedPiacenzaDossiers = [
       },
       {
         "label": "Data pubblicazione",
-        "value": "30/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "23/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Stato avanzamento",
@@ -58,16 +58,321 @@ export const generatedPiacenzaDossiers = [
     ],
     "milestones": [
       {
-        "date": "30/04/2026",
+        "date": "23/09/2026",
         "label": "Data pubblicazione",
         "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
       }
     ]
   },
   {
-    "slug": "piacenza-affidamento-ai-sensi-dell-art-50-comma-1-lett-b-del-d-lgs-36-2023-del-servizio-di",
-    "code": "PC-RAW-20260510-02",
-    "title": "AFFIDAMENTO, AI SENSI DELL'ART.. 50, COMMA 1 LETT. B) DEL D. LGS. 36/2023, DEL SERVIZIO DI PROGETTAZIONE E DIREZIONE LAVORI PER LALLESTIMENTO DEL MUSEO CIVICO DI STORIA NATURALE PALAZZO DEL GOVERNATORE- PIACENZA, PER IL PERIODO DAL 04 MAGGIO 2026 FINO ALLA CONSEGNA DELLALLESTIMENTO E DELLE RELATIVE CERTIFICAZIONI.",
+    "slug": "piacenza-affidamento-ai-sensi-dell-art-50-comma-1-lett-b-del-d-lgs-36-2023-del-servizio--2",
+    "code": "PC-RAW-20260924-02",
+    "title": "AFFIDAMENTO, AI SENSI DELL'ART.. 50, COMMA 1 LETT. B) DEL D. LGS. 36/2023, DEL SERVIZIO DI ORGANIZZAZIONE DI ATTIVIT DI PROMOZIONE ALLA LETTURA TRAMITE LABORATORI E INCONTRI CON AUTORI- BOLLE DARTE 5, PER IL PERIODO DA OTTOBRE 2026 A MARZO 2027.",
+    "authority": "Comune di Piacenza",
+    "location": "Piacenza, Italia",
+    "sector": "Spesa pubblica locale",
+    "contractor": null,
+    "procurementMethod": "Esito di gara",
+    "statusLabel": "Conclusa - Aggiudicata",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "budgetPlanned": null,
+    "budgetActual": null,
+    "timelinePlannedDays": null,
+    "timelineActualDays": null,
+    "completionPct": 0,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 60,
+    "sourceCount": 1,
+    "sourceQuality": "medium",
+    "dossierStrength": "partial",
+    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
+    "valueKind": "not-published",
+    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "evidence": [
+      {
+        "label": "CIG",
+        "value": "BD156DA381 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Procedura",
+        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Data pubblicazione",
+        "value": "23/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Stato avanzamento",
+        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      }
+    ],
+    "missingFacts": [
+      "Importo/base di gara non estratto automaticamente.",
+      "Aggiudicatario/affidatario non estratto automaticamente."
+    ],
+    "sources": [
+      {
+        "label": "Portale Appalti Comune di Piacenza - Esiti",
+        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+        "note": "portale-appalti; confidenza high; status 200."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "23/09/2026",
+        "label": "Data pubblicazione",
+        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
+      }
+    ]
+  },
+  {
+    "slug": "piacenza-lavori-di-realizzazione-degli-interventi-di-manutenzione-ordinaria-della-segnalet",
+    "code": "PC-RAW-20260924-03",
+    "title": "LAVORI DI REALIZZAZIONE DEGLI INTERVENTI DI MANUTENZIONE ORDINARIA DELLA SEGNALETICA DEGLI STALLI DI SOSTA A ROTAZIONE A PAGAMENTO SITUATI NEL TERRITORIO DEL COMUNE DI PIACENZA",
+    "authority": "Comune di Piacenza",
+    "location": "Piacenza, Italia",
+    "sector": "Spesa pubblica locale",
+    "contractor": null,
+    "procurementMethod": "Esito di gara",
+    "statusLabel": "Conclusa - Aggiudicata",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "budgetPlanned": null,
+    "budgetActual": null,
+    "timelinePlannedDays": null,
+    "timelineActualDays": null,
+    "completionPct": 0,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 60,
+    "sourceCount": 1,
+    "sourceQuality": "medium",
+    "dossierStrength": "partial",
+    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
+    "valueKind": "not-published",
+    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "evidence": [
+      {
+        "label": "CIG",
+        "value": "BCD871CE43 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Procedura",
+        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Data pubblicazione",
+        "value": "22/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Stato avanzamento",
+        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      }
+    ],
+    "missingFacts": [
+      "Importo/base di gara non estratto automaticamente.",
+      "Aggiudicatario/affidatario non estratto automaticamente."
+    ],
+    "sources": [
+      {
+        "label": "Portale Appalti Comune di Piacenza - Esiti",
+        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+        "note": "portale-appalti; confidenza high; status 200."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "22/09/2026",
+        "label": "Data pubblicazione",
+        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
+      }
+    ]
+  },
+  {
+    "slug": "piacenza-affidamento-diretto-ai-sensi-dell-art-50-comma-1-lettera-b-del-servizio-di-ingeng",
+    "code": "PC-RAW-20260924-04",
+    "title": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETTERA B) DEL SERVIZIO DI INGENGERIA E ARCHITETTURA PER LO SVOLGIMENTO DELLE FUNZIONI DI ESPERTO RESTAURATORE, QUALE COMPONENTE DELL'ORGANO DI COLLAUDO DI INTERVENTI DI RIQUALIFICAZIONE E RISTRUTTURAZIONE DI IMMOBILI SOTTOPOSTI A TUTELA AI SENSI DEL D.LGS. 42/2004",
+    "authority": "Comune di Piacenza",
+    "location": "Piacenza, Italia",
+    "sector": "Patrimonio e spazi pubblici",
+    "contractor": null,
+    "procurementMethod": "Affidamento diretto",
+    "statusLabel": "Conclusa - Aggiudicata",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "budgetPlanned": null,
+    "budgetActual": null,
+    "timelinePlannedDays": null,
+    "timelineActualDays": null,
+    "completionPct": 0,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 60,
+    "sourceCount": 1,
+    "sourceQuality": "medium",
+    "dossierStrength": "partial",
+    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
+    "valueKind": "not-published",
+    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "evidence": [
+      {
+        "label": "CIG",
+        "value": "BCE5ABE360 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Procedura",
+        "value": "Affidamento diretto (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Data pubblicazione",
+        "value": "22/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Stato avanzamento",
+        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      }
+    ],
+    "missingFacts": [
+      "Importo/base di gara non estratto automaticamente.",
+      "Aggiudicatario/affidatario non estratto automaticamente."
+    ],
+    "sources": [
+      {
+        "label": "Portale Appalti Comune di Piacenza - Esiti",
+        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+        "note": "portale-appalti; confidenza high; status 200."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "22/09/2026",
+        "label": "Data pubblicazione",
+        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
+      }
+    ]
+  },
+  {
+    "slug": "piacenza-servizio-di-verifica-del-progetto-esecutivo-per-il-completamento-dellintervento-p",
+    "code": "PC-RAW-20260924-05",
+    "title": "SERVIZIO DI VERIFICA DEL PROGETTO ESECUTIVO PER IL COMPLETAMENTO DELLINTERVENTO PNRR MISSIONE 5. C2.2, INVESTIMENTO 2.1. - LAVORI DI ESECUZIONE DI TUTTE LE OPERE, SOMMINISTRAZIONI E PRESTAZIONI OCCORRENTI PER LA \"RIQUALIFICAZIONE E RIFUNZIONALIZZAZIONE DEGLI EDIFICI NELLA ZONA SUD DELL'EX LABORATORIO PONTIERI\" E RELATIVE PERTINENZE",
+    "authority": "Comune di Piacenza",
+    "location": "Piacenza, Italia",
+    "sector": "Spesa pubblica locale",
+    "contractor": null,
+    "procurementMethod": "Esito di gara",
+    "statusLabel": "Conclusa - Aggiudicata",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "budgetPlanned": null,
+    "budgetActual": null,
+    "timelinePlannedDays": null,
+    "timelineActualDays": null,
+    "completionPct": 0,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 60,
+    "sourceCount": 1,
+    "sourceQuality": "medium",
+    "dossierStrength": "partial",
+    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
+    "valueKind": "not-published",
+    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "evidence": [
+      {
+        "label": "CIG",
+        "value": "BCB76443DD (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Procedura",
+        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Data pubblicazione",
+        "value": "22/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Stato avanzamento",
+        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      }
+    ],
+    "missingFacts": [
+      "Importo/base di gara non estratto automaticamente.",
+      "Aggiudicatario/affidatario non estratto automaticamente."
+    ],
+    "sources": [
+      {
+        "label": "Portale Appalti Comune di Piacenza - Esiti",
+        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+        "note": "portale-appalti; confidenza high; status 200."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "22/09/2026",
+        "label": "Data pubblicazione",
+        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
+      }
+    ]
+  },
+  {
+    "slug": "piacenza-lavori-di-installazione-dell-impianto-elettrico-di-alimentazione-al-nuovo-refrige",
+    "code": "PC-RAW-20260924-06",
+    "title": "LAVORI DI INSTALLAZIONE DELL'IMPIANTO ELETTRICO DI ALIMENTAZIONE AL NUOVO REFRIGERATORE IN POMPA DI CALORE A SERVIZIO DEGLI UFFICI DI BORGO FAXHALL",
+    "authority": "Comune di Piacenza",
+    "location": "Piacenza, Italia",
+    "sector": "Spesa pubblica locale",
+    "contractor": null,
+    "procurementMethod": "Esito di gara",
+    "statusLabel": "Conclusa - Aggiudicata",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "budgetPlanned": null,
+    "budgetActual": null,
+    "timelinePlannedDays": null,
+    "timelineActualDays": null,
+    "completionPct": 0,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 60,
+    "sourceCount": 1,
+    "sourceQuality": "medium",
+    "dossierStrength": "partial",
+    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
+    "valueKind": "not-published",
+    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "evidence": [
+      {
+        "label": "CIG",
+        "value": "BCC45DD481 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Procedura",
+        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Data pubblicazione",
+        "value": "18/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      },
+      {
+        "label": "Stato avanzamento",
+        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+      }
+    ],
+    "missingFacts": [
+      "Importo/base di gara non estratto automaticamente.",
+      "Aggiudicatario/affidatario non estratto automaticamente."
+    ],
+    "sources": [
+      {
+        "label": "Portale Appalti Comune di Piacenza - Esiti",
+        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+        "note": "portale-appalti; confidenza high; status 200."
+      }
+    ],
+    "milestones": [
+      {
+        "date": "18/09/2026",
+        "label": "Data pubblicazione",
+        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
+      }
+    ]
+  },
+  {
+    "slug": "piacenza-affidamento-dei-servizi-di-assistenza-tecnica-presso-sale-comunali-di-amplificazi",
+    "code": "PC-RAW-20260924-07",
+    "title": "Affidamento dei servizi di assistenza tecnica presso sale comunali, di amplificazione sonora e service audio e luci - Contratto attuativo n.9 dell'Accordo Quadro",
     "authority": "Comune di Piacenza",
     "location": "Piacenza, Italia",
     "sector": "Spesa pubblica locale",
@@ -80,7 +385,7 @@ export const generatedPiacenzaDossiers = [
     "timelinePlannedDays": null,
     "timelineActualDays": null,
     "completionPct": 0,
-    "updatedAt": "2026-05-10",
+    "updatedAt": "2026-09-24",
     "dataCoveragePct": 60,
     "sourceCount": 1,
     "sourceQuality": "medium",
@@ -91,7 +396,7 @@ export const generatedPiacenzaDossiers = [
     "evidence": [
       {
         "label": "CIG",
-        "value": "BB701C264E (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "BD050FFC76 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Procedura",
@@ -99,7 +404,7 @@ export const generatedPiacenzaDossiers = [
       },
       {
         "label": "Data pubblicazione",
-        "value": "28/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "17/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Stato avanzamento",
@@ -119,138 +424,16 @@ export const generatedPiacenzaDossiers = [
     ],
     "milestones": [
       {
-        "date": "28/04/2026",
+        "date": "17/09/2026",
         "label": "Data pubblicazione",
         "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
       }
     ]
   },
   {
-    "slug": "piacenza-procedura-aperta-per-laffidamento-del-servizio-di-gestione-del-gattile-comunale-i",
-    "code": "PC-RAW-20260510-03",
-    "title": "PROCEDURA APERTA PER LAFFIDAMENTO DEL SERVIZIO DI GESTIONE DEL GATTILE COMUNALE IN LOCALITA' \"LE BOTTEGHE DI LE MOSE\" E ATTIVIT CORRELATE PER IL PERIODO dal 01/02/2026 O comunque dalla data Del VERBALE DI CONSEGNA DEL SERVIZIO AL 31/03/2029 (38 MESI).",
-    "authority": "Comune di Piacenza",
-    "location": "Piacenza, Italia",
-    "sector": "Spesa pubblica locale",
-    "contractor": null,
-    "procurementMethod": "Procedura aperta",
-    "statusLabel": "Conclusa - Aggiudicata",
-    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
-    "budgetPlanned": null,
-    "budgetActual": null,
-    "timelinePlannedDays": null,
-    "timelineActualDays": null,
-    "completionPct": 0,
-    "updatedAt": "2026-05-10",
-    "dataCoveragePct": 60,
-    "sourceCount": 1,
-    "sourceQuality": "medium",
-    "dossierStrength": "partial",
-    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
-    "valueKind": "not-published",
-    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
-    "evidence": [
-      {
-        "label": "CIG",
-        "value": "B94EB47484 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Procedura",
-        "value": "Procedura aperta (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Data pubblicazione",
-        "value": "24/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Stato avanzamento",
-        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      }
-    ],
-    "missingFacts": [
-      "Importo/base di gara non estratto automaticamente.",
-      "Aggiudicatario/affidatario non estratto automaticamente."
-    ],
-    "sources": [
-      {
-        "label": "Portale Appalti Comune di Piacenza - Esiti",
-        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
-        "note": "portale-appalti; confidenza high; status 200."
-      }
-    ],
-    "milestones": [
-      {
-        "date": "24/04/2026",
-        "label": "Data pubblicazione",
-        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
-      }
-    ]
-  },
-  {
-    "slug": "piacenza-affidamento-diretto-dei-lavori-di-manutenzione-straordinaria-presso-le-segreterie",
-    "code": "PC-RAW-20260510-04",
-    "title": "AFFIDAMENTO DIRETTO DEI LAVORI DI MANUTENZIONE STRAORDINARIA PRESSO LE SEGRETERIE DELLE SCUOLE COMUNALI",
-    "authority": "Comune di Piacenza",
-    "location": "Piacenza, Italia",
-    "sector": "Spesa pubblica locale",
-    "contractor": null,
-    "procurementMethod": "Affidamento diretto",
-    "statusLabel": "Conclusa - Aggiudicata",
-    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
-    "budgetPlanned": null,
-    "budgetActual": null,
-    "timelinePlannedDays": null,
-    "timelineActualDays": null,
-    "completionPct": 0,
-    "updatedAt": "2026-05-10",
-    "dataCoveragePct": 60,
-    "sourceCount": 1,
-    "sourceQuality": "medium",
-    "dossierStrength": "partial",
-    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
-    "valueKind": "not-published",
-    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
-    "evidence": [
-      {
-        "label": "CIG",
-        "value": "BB3B7A680F (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Procedura",
-        "value": "Affidamento diretto (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Data pubblicazione",
-        "value": "22/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Stato avanzamento",
-        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      }
-    ],
-    "missingFacts": [
-      "Importo/base di gara non estratto automaticamente.",
-      "Aggiudicatario/affidatario non estratto automaticamente."
-    ],
-    "sources": [
-      {
-        "label": "Portale Appalti Comune di Piacenza - Esiti",
-        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
-        "note": "portale-appalti; confidenza high; status 200."
-      }
-    ],
-    "milestones": [
-      {
-        "date": "22/04/2026",
-        "label": "Data pubblicazione",
-        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
-      }
-    ]
-  },
-  {
-    "slug": "piacenza-servizio-tecnico-specialistico-di-assistenza-archeologica-relativa-al-progetto-di",
-    "code": "PC-RAW-20260510-05",
-    "title": "SERVIZIO TECNICO SPECIALISTICO DI ASSISTENZA ARCHEOLOGICA RELATIVA AL PROGETTO DI INSTALLAZIONE DI PENSILINE FOTOVOLTAICHE PARCHEGGIO SCAMBIATORE COMPRESO TRA VIALE MALTA E VIA PALMERIO",
+    "slug": "piacenza-affidamento-ai-sensi-dell-art-50-comma-1-lett-b-del-d-lgs-36-2023-della-fornitura",
+    "code": "PC-RAW-20260924-08",
+    "title": "AFFIDAMENTO, AI SENSI DELL'ART.. 50, COMMA 1 LETT. B) DEL D. LGS. 36/2023, DELLA FORNITURA DI SEDUTE OPERATIVE E CLASSIFICATORI PER UFFICI E SERVIZI COMUNALI",
     "authority": "Comune di Piacenza",
     "location": "Piacenza, Italia",
     "sector": "Spesa pubblica locale",
@@ -263,7 +446,7 @@ export const generatedPiacenzaDossiers = [
     "timelinePlannedDays": null,
     "timelineActualDays": null,
     "completionPct": 0,
-    "updatedAt": "2026-05-10",
+    "updatedAt": "2026-09-24",
     "dataCoveragePct": 60,
     "sourceCount": 1,
     "sourceQuality": "medium",
@@ -274,7 +457,7 @@ export const generatedPiacenzaDossiers = [
     "evidence": [
       {
         "label": "CIG",
-        "value": "BB58A6C9A0 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "BD007B3FEA (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Procedura",
@@ -282,7 +465,7 @@ export const generatedPiacenzaDossiers = [
       },
       {
         "label": "Data pubblicazione",
-        "value": "22/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "16/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Stato avanzamento",
@@ -302,82 +485,21 @@ export const generatedPiacenzaDossiers = [
     ],
     "milestones": [
       {
-        "date": "22/04/2026",
+        "date": "16/09/2026",
         "label": "Data pubblicazione",
         "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
       }
     ]
   },
   {
-    "slug": "piacenza-servizio-di-ingegneria-e-architettura-per-il-collaudo-statico-relativo-all-interv",
-    "code": "PC-RAW-20260510-06",
-    "title": "SERVIZIO DI INGEGNERIA E ARCHITETTURA PER IL COLLAUDO STATICO RELATIVO ALL'INTERVENTO LAVORI DI RIQUALIFICAZIONE E ADEGUAMENTO EDIFICI SCOLASTICI 2022: PALESTRA DELLA SCUOLA DUE GIUGNO",
-    "authority": "Comune di Piacenza",
-    "location": "Piacenza, Italia",
-    "sector": "Servizi scolastici",
-    "contractor": null,
-    "procurementMethod": "Esito di gara",
-    "statusLabel": "Conclusa - Aggiudicata",
-    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
-    "budgetPlanned": null,
-    "budgetActual": null,
-    "timelinePlannedDays": null,
-    "timelineActualDays": null,
-    "completionPct": 0,
-    "updatedAt": "2026-05-10",
-    "dataCoveragePct": 60,
-    "sourceCount": 1,
-    "sourceQuality": "medium",
-    "dossierStrength": "partial",
-    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
-    "valueKind": "not-published",
-    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
-    "evidence": [
-      {
-        "label": "CIG",
-        "value": "BB34A9CCB1 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Procedura",
-        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Data pubblicazione",
-        "value": "22/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Stato avanzamento",
-        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      }
-    ],
-    "missingFacts": [
-      "Importo/base di gara non estratto automaticamente.",
-      "Aggiudicatario/affidatario non estratto automaticamente."
-    ],
-    "sources": [
-      {
-        "label": "Portale Appalti Comune di Piacenza - Esiti",
-        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
-        "note": "portale-appalti; confidenza high; status 200."
-      }
-    ],
-    "milestones": [
-      {
-        "date": "22/04/2026",
-        "label": "Data pubblicazione",
-        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
-      }
-    ]
-  },
-  {
-    "slug": "piacenza-ervizio-di-progettazione-direzione-lavori-rinnovo-cpi-in-essere-per-limplemantazi",
-    "code": "PC-RAW-20260510-07",
-    "title": "ERVIZIO DI PROGETTAZIONE, DIREZIONE LAVORI, RINNOVO CPI IN ESSERE, PER LIMPLEMANTAZIONE DELLE TECNICHE DI SICUREZZA ANTINCENDIO DEL SALONE POSTO AL PIANO PRIMO DI PALAZZO GOTICO MEDIANTE APPLICAZIONE DELLA FIRE SAFETY ENGINEERING AL FINE DELLOTTENIMENTO DI NUOVO CPI",
+    "slug": "piacenza-procedura-negoziata-per-la-concessione-in-uso-e-gestione-dell-impianto-sportivo-d",
+    "code": "PC-RAW-20260924-09",
+    "title": "PROCEDURA NEGOZIATA PER LA CONCESSIONE IN USO E GESTIONE DELL IMPIANTO SPORTIVO DESTINATO ALLA PISTA DI MOTOCROSS E FUORISTRADA DENOMINATA MOTOPARK PIACENZA SITA IN VIA DELLAGRICOLTURA A PIACENZA, PER IL PERIODO DI 5 ANNI A FAR DATA DAL VERBALE DI CONSEGNA.",
     "authority": "Comune di Piacenza",
     "location": "Piacenza, Italia",
     "sector": "Spesa pubblica locale",
     "contractor": null,
-    "procurementMethod": "Esito di gara",
+    "procurementMethod": "Procedura negoziata",
     "statusLabel": "Conclusa - Aggiudicata",
     "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
     "budgetPlanned": null,
@@ -385,26 +507,26 @@ export const generatedPiacenzaDossiers = [
     "timelinePlannedDays": null,
     "timelineActualDays": null,
     "completionPct": 0,
-    "updatedAt": "2026-05-10",
+    "updatedAt": "2026-09-24",
     "dataCoveragePct": 60,
     "sourceCount": 1,
     "sourceQuality": "medium",
     "dossierStrength": "partial",
     "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
-    "valueKind": "not-published",
-    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
+    "valueKind": "concession-estimate",
+    "valueNote": "Valore da trattare come stima/concessione, non come spesa pubblica diretta, finche non verificato.",
     "evidence": [
       {
         "label": "CIG",
-        "value": "BB3C789442 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "BABA076560 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Procedura",
-        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "Procedura negoziata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Data pubblicazione",
-        "value": "17/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
+        "value": "15/09/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
       },
       {
         "label": "Stato avanzamento",
@@ -424,132 +546,51 @@ export const generatedPiacenzaDossiers = [
     ],
     "milestones": [
       {
-        "date": "17/04/2026",
+        "date": "15/09/2026",
         "label": "Data pubblicazione",
         "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
       }
     ]
   },
   {
-    "slug": "piacenza-fornitura-e-posa-di-nuovo-refrigeratore-in-pompa-di-calore-da-installare-presso-g",
-    "code": "PC-RAW-20260510-08",
-    "title": "FORNITURA E POSA DI NUOVO REFRIGERATORE IN POMPA DI CALORE DA INSTALLARE PRESSO GLI UFFICI DI BORGO FAXHALL AL FINE DI DESTINARLI A CENTRO PER LIMPIEGO DELLAGENZIA REGIONALE DEL LAVORO",
+    "slug": "piacenza-concorsi-leggi-di-piu-notizie-18-settembre-2026-lavori-di-manutenzione-in-via-ein",
+    "code": "PC-RAW-20260924-10",
+    "title": "Concorsi Leggi di più Notizie 18 settembre 2026 Lavori di manutenzione in via Einaudi Fino al 31 ottobre chiusa al traffico la carreggiata verso via Emilia Pavese e San Nicolò.",
     "authority": "Comune di Piacenza",
     "location": "Piacenza, Italia",
-    "sector": "Spesa pubblica locale",
+    "sector": "Inclusione e servizi sociali",
     "contractor": null,
-    "procurementMethod": "Esito di gara",
-    "statusLabel": "Conclusa - Aggiudicata",
-    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
+    "procurementMethod": "Ricerca pubblica preliminare",
+    "statusLabel": "Stato non estratto",
+    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://www.comune.piacenza.it/. Dati mancanti rilevati: 5.",
     "budgetPlanned": null,
     "budgetActual": null,
     "timelinePlannedDays": null,
     "timelineActualDays": null,
     "completionPct": 0,
-    "updatedAt": "2026-05-10",
-    "dataCoveragePct": 60,
+    "updatedAt": "2026-09-24",
+    "dataCoveragePct": 20,
     "sourceCount": 1,
-    "sourceQuality": "medium",
+    "sourceQuality": "low",
     "dossierStrength": "partial",
     "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
     "valueKind": "not-published",
     "valueNote": "Valore economico non disponibile nella ricerca grezza.",
-    "evidence": [
-      {
-        "label": "CIG",
-        "value": "BB3D377C7D (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Procedura",
-        "value": "Esito di gara (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Data pubblicazione",
-        "value": "17/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Stato avanzamento",
-        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      }
-    ],
+    "evidence": [],
     "missingFacts": [
+      "CIG non estratto automaticamente.",
       "Importo/base di gara non estratto automaticamente.",
-      "Aggiudicatario/affidatario non estratto automaticamente."
+      "Aggiudicatario/affidatario non estratto automaticamente.",
+      "Cronologia/date procedurali non estratte automaticamente.",
+      "Stato avanzamento procedura non estratto automaticamente."
     ],
     "sources": [
       {
-        "label": "Portale Appalti Comune di Piacenza - Esiti",
-        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
-        "note": "portale-appalti; confidenza high; status 200."
+        "label": "Comune di Piacenza",
+        "url": "https://www.comune.piacenza.it/",
+        "note": "comune-piacenza; confidenza high; status 200."
       }
     ],
-    "milestones": [
-      {
-        "date": "17/04/2026",
-        "label": "Data pubblicazione",
-        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
-      }
-    ]
-  },
-  {
-    "slug": "piacenza-affidamento-diretto-ai-sensi-dell-art-50-comma-1-lett-b-del-servizio-di-archiviaz",
-    "code": "PC-RAW-20260510-09",
-    "title": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50 COMMA 1 LETT. B DEL SERVIZIO DI ARCHIVIAZIONE DEI CONTRATTI STIPULATI, COMPRENSIVO DI ATTIVAZIONE, CONFIGURAZIONE E FORMAZIONE DEL PERSONALE , MEDIANTE IMPLEMENTAZIONE DELLA PIATTAFORMA URBISMART",
-    "authority": "Comune di Piacenza",
-    "location": "Piacenza, Italia",
-    "sector": "Spesa pubblica locale",
-    "contractor": null,
-    "procurementMethod": "Affidamento diretto",
-    "statusLabel": "Conclusa - Aggiudicata",
-    "summary": "Bozza generata da finding pubblico su Piacenza. Fonte primaria: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp. Dati mancanti rilevati: 2.",
-    "budgetPlanned": null,
-    "budgetActual": null,
-    "timelinePlannedDays": null,
-    "timelineActualDays": null,
-    "completionPct": 0,
-    "updatedAt": "2026-05-10",
-    "dataCoveragePct": 60,
-    "sourceCount": 1,
-    "sourceQuality": "medium",
-    "dossierStrength": "partial",
-    "dossierNote": "Dossier parziale generato da finding automatico: richiede revisione umana prima della pubblicazione.",
-    "valueKind": "not-published",
-    "valueNote": "Valore economico non disponibile nella ricerca grezza.",
-    "evidence": [
-      {
-        "label": "CIG",
-        "value": "BB43C5CC49 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Procedura",
-        "value": "Affidamento diretto (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Data pubblicazione",
-        "value": "15/04/2026 (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      },
-      {
-        "label": "Stato avanzamento",
-        "value": "Conclusa - Aggiudicata (fonte: https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp)"
-      }
-    ],
-    "missingFacts": [
-      "Importo/base di gara non estratto automaticamente.",
-      "Aggiudicatario/affidatario non estratto automaticamente."
-    ],
-    "sources": [
-      {
-        "label": "Portale Appalti Comune di Piacenza - Esiti",
-        "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
-        "note": "portale-appalti; confidenza high; status 200."
-      }
-    ],
-    "milestones": [
-      {
-        "date": "15/04/2026",
-        "label": "Data pubblicazione",
-        "note": "Data estratta automaticamente dalla fonte https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp; richiede verifica."
-      }
-    ]
+    "milestones": []
   }
 ] satisfies SpendingProject[];
