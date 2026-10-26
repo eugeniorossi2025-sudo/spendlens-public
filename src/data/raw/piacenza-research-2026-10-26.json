@@ -1,0 +1,49 @@
+{
+  "title": "Portale Appalti Comune di Piacenza - Gare",
+  "authority": "Comune di Piacenza",
+  "location": "Piacenza",
+  "sources": [
+    {
+      "title": "Portale Appalti Comune di Piacenza - Gare",
+      "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_bandi_lista.wp",
+      "sourceKind": "portale-appalti",
+      "confidence": "medium",
+      "fetchedAt": "2026-10-26T06:50:45.929Z",
+      "status": null,
+      "contentType": null
+    },
+    {
+      "title": "Portale Appalti Comune di Piacenza - Esiti",
+      "url": "https://appalti.comune.piacenza.it/PortaleAppalti/it/ppgare_esiti_lista.wp",
+      "sourceKind": "portale-appalti",
+      "confidence": "medium",
+      "fetchedAt": "2026-10-26T06:51:05.764Z",
+      "status": null,
+      "contentType": null
+    },
+    {
+      "title": "Comune di Piacenza",
+      "url": "https://www.comune.piacenza.it/",
+      "sourceKind": "comune-piacenza",
+      "confidence": "medium",
+      "fetchedAt": "2026-10-26T06:51:21.052Z",
+      "status": null,
+      "contentType": null
+    }
+  ],
+  "rawText": "",
+  "budgetPlanned": null,
+  "contractor": null,
+  "dates": [],
+  "keywords": [
+    "comune di piacenza"
+  ],
+  "facts": [],
+  "findings": [],
+  "missingFacts": [
+    "Importo/base di gara non estratto automaticamente.",
+    "Aggiudicatario/affidatario non estratto automaticamente.",
+    "Date procedurali non estratte automaticamente.",
+    "Fonte ANAC non collegata in questa ricerca."
+  ]
+}
